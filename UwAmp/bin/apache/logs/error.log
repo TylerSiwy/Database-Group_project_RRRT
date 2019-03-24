@@ -1,0 +1,79 @@
+[Sun Mar 24 10:26:29.057275 2019] [ssl:warn] [pid 10860:tid 228] AH01906: main-serveur:443:0 server certificate is a CA certificate (BasicConstraints: CA == TRUE !?)
+[Sun Mar 24 10:26:29.058277 2019] [ssl:warn] [pid 10860:tid 228] AH01909: main-serveur:443:0 server certificate does NOT include an ID which matches the server name
+[Sun Mar 24 10:26:29.318967 2019] [ssl:warn] [pid 10860:tid 228] AH01873: Init: Session Cache is not configured [hint: SSLSessionCache]
+[Sun Mar 24 10:26:29.318967 2019] [ssl:warn] [pid 10860:tid 228] AH01906: main-serveur:443:0 server certificate is a CA certificate (BasicConstraints: CA == TRUE !?)
+[Sun Mar 24 10:26:29.318967 2019] [ssl:warn] [pid 10860:tid 228] AH01909: main-serveur:443:0 server certificate does NOT include an ID which matches the server name
+[Sun Mar 24 10:26:29.414224 2019] [mpm_winnt:notice] [pid 10860:tid 228] AH00455: Apache/2.4.18 (Win32) OpenSSL/1.0.2f PHP/5.6.18 configured -- resuming normal operations
+[Sun Mar 24 10:26:29.414224 2019] [mpm_winnt:notice] [pid 10860:tid 228] AH00456: Server built: Jan 28 2016 09:58:25
+[Sun Mar 24 10:26:29.414224 2019] [core:notice] [pid 10860:tid 228] AH00094: Command line: 'D:\\rpaulhus\\UwAmp\\bin\\apache\\bin\\httpd.exe -d D:/rpaulhus/UwAmp/bin/apache -f D:\\rpaulhus\\UwAmp\\bin\\apache\\conf\\httpd.conf'
+[Sun Mar 24 10:26:29.417232 2019] [mpm_winnt:notice] [pid 10860:tid 228] AH00418: Parent: Created child process 11664
+[Sun Mar 24 10:26:30.028861 2019] [ssl:warn] [pid 11664:tid 648] AH01906: main-serveur:443:0 server certificate is a CA certificate (BasicConstraints: CA == TRUE !?)
+[Sun Mar 24 10:26:30.029862 2019] [ssl:warn] [pid 11664:tid 648] AH01909: main-serveur:443:0 server certificate does NOT include an ID which matches the server name
+[Sun Mar 24 10:26:30.176248 2019] [ssl:warn] [pid 11664:tid 648] AH01873: Init: Session Cache is not configured [hint: SSLSessionCache]
+[Sun Mar 24 10:26:30.176248 2019] [ssl:warn] [pid 11664:tid 648] AH01906: main-serveur:443:0 server certificate is a CA certificate (BasicConstraints: CA == TRUE !?)
+[Sun Mar 24 10:26:30.176248 2019] [ssl:warn] [pid 11664:tid 648] AH01909: main-serveur:443:0 server certificate does NOT include an ID which matches the server name
+[Sun Mar 24 10:26:30.203323 2019] [mpm_winnt:notice] [pid 11664:tid 648] AH00354: Child: Starting 64 worker threads.
+[Sun Mar 24 10:27:58.065621 2019] [:error] [pid 11664:tid 1308] [client ::1:54460] PHP Warning:  mysqli::mysqli(): (HY000/1045): Access denied for user 'root'@'localhost' (using password: NO) in D:\\rpaulhus\\UwAmp\\www\\index.php on line 7
+[Sun Mar 24 10:27:58.066627 2019] [:error] [pid 11664:tid 1308] [client ::1:54460] PHP Stack trace:
+[Sun Mar 24 10:27:58.066627 2019] [:error] [pid 11664:tid 1308] [client ::1:54460] PHP   1. {main}() D:\\rpaulhus\\UwAmp\\www\\index.php:0
+[Sun Mar 24 10:27:58.066627 2019] [:error] [pid 11664:tid 1308] [client ::1:54460] PHP   2. mysqli->mysqli() D:\\rpaulhus\\UwAmp\\www\\index.php:7
+[Sun Mar 24 10:29:22.698179 2019] [:error] [pid 11664:tid 1288] [client ::1:54494] PHP Warning:  mysqli::mysqli(): (HY000/1049): Unknown database 'dealership' in D:\\rpaulhus\\UwAmp\\www\\index.php on line 7
+[Sun Mar 24 10:29:22.698179 2019] [:error] [pid 11664:tid 1288] [client ::1:54494] PHP Stack trace:
+[Sun Mar 24 10:29:22.698179 2019] [:error] [pid 11664:tid 1288] [client ::1:54494] PHP   1. {main}() D:\\rpaulhus\\UwAmp\\www\\index.php:0
+[Sun Mar 24 10:29:22.698179 2019] [:error] [pid 11664:tid 1288] [client ::1:54494] PHP   2. mysqli->mysqli() D:\\rpaulhus\\UwAmp\\www\\index.php:7
+[Sun Mar 24 10:30:55.900424 2019] [:error] [pid 11664:tid 1288] [client ::1:54572] PHP Warning:  mysqli::mysqli(): (HY000/1049): Unknown database 'dealership' in D:\\rpaulhus\\UwAmp\\www\\index.php on line 7
+[Sun Mar 24 10:30:55.900424 2019] [:error] [pid 11664:tid 1288] [client ::1:54572] PHP Stack trace:
+[Sun Mar 24 10:30:55.900424 2019] [:error] [pid 11664:tid 1288] [client ::1:54572] PHP   1. {main}() D:\\rpaulhus\\UwAmp\\www\\index.php:0
+[Sun Mar 24 10:30:55.900424 2019] [:error] [pid 11664:tid 1288] [client ::1:54572] PHP   2. mysqli->mysqli() D:\\rpaulhus\\UwAmp\\www\\index.php:7
+[Sun Mar 24 10:31:04.260416 2019] [mpm_winnt:crit] [pid 11664:tid 648] AH02538: Child: Parent process exited abruptly. Child process is ending
+[Sun Mar 24 10:31:10.704072 2019] [ssl:warn] [pid 10140:tid 684] AH01906: main-serveur:443:0 server certificate is a CA certificate (BasicConstraints: CA == TRUE !?)
+[Sun Mar 24 10:31:10.705075 2019] [ssl:warn] [pid 10140:tid 684] AH01909: main-serveur:443:0 server certificate does NOT include an ID which matches the server name
+[Sun Mar 24 10:31:10.744469 2019] [core:warn] [pid 10140:tid 684] AH00098: pid file D:/rpaulhus/UwAmp/bin/apache/logs/httpd.pid overwritten -- Unclean shutdown of previous Apache run?
+[Sun Mar 24 10:31:10.856775 2019] [ssl:warn] [pid 10140:tid 684] AH01873: Init: Session Cache is not configured [hint: SSLSessionCache]
+[Sun Mar 24 10:31:10.857778 2019] [ssl:warn] [pid 10140:tid 684] AH01906: main-serveur:443:0 server certificate is a CA certificate (BasicConstraints: CA == TRUE !?)
+[Sun Mar 24 10:31:10.857778 2019] [ssl:warn] [pid 10140:tid 684] AH01909: main-serveur:443:0 server certificate does NOT include an ID which matches the server name
+[Sun Mar 24 10:31:10.876829 2019] [mpm_winnt:notice] [pid 10140:tid 684] AH00455: Apache/2.4.18 (Win32) OpenSSL/1.0.2f PHP/5.6.18 configured -- resuming normal operations
+[Sun Mar 24 10:31:10.876829 2019] [mpm_winnt:notice] [pid 10140:tid 684] AH00456: Server built: Jan 28 2016 09:58:25
+[Sun Mar 24 10:31:10.876829 2019] [core:notice] [pid 10140:tid 684] AH00094: Command line: 'D:\\rpaulhus\\UwAmp\\bin\\apache\\bin\\httpd.exe -d D:/rpaulhus/UwAmp/bin/apache -f D:\\rpaulhus\\UwAmp\\bin\\apache\\conf\\httpd.conf'
+[Sun Mar 24 10:31:10.877832 2019] [mpm_winnt:notice] [pid 10140:tid 684] AH00418: Parent: Created child process 14116
+[Sun Mar 24 10:31:11.468477 2019] [ssl:warn] [pid 14116:tid 684] AH01906: main-serveur:443:0 server certificate is a CA certificate (BasicConstraints: CA == TRUE !?)
+[Sun Mar 24 10:31:11.468477 2019] [ssl:warn] [pid 14116:tid 684] AH01909: main-serveur:443:0 server certificate does NOT include an ID which matches the server name
+[Sun Mar 24 10:31:11.750013 2019] [ssl:warn] [pid 14116:tid 684] AH01873: Init: Session Cache is not configured [hint: SSLSessionCache]
+[Sun Mar 24 10:31:11.751016 2019] [ssl:warn] [pid 14116:tid 684] AH01906: main-serveur:443:0 server certificate is a CA certificate (BasicConstraints: CA == TRUE !?)
+[Sun Mar 24 10:31:11.751016 2019] [ssl:warn] [pid 14116:tid 684] AH01909: main-serveur:443:0 server certificate does NOT include an ID which matches the server name
+[Sun Mar 24 10:31:11.776085 2019] [mpm_winnt:notice] [pid 14116:tid 684] AH00354: Child: Starting 64 worker threads.
+[Sun Mar 24 10:31:11.920069 2019] [:error] [pid 14116:tid 1380] [client ::1:54589] PHP Warning:  mysqli::mysqli(): (HY000/1049): Unknown database 'dealership' in D:\\rpaulhus\\UwAmp\\www\\index.php on line 7
+[Sun Mar 24 10:31:11.920069 2019] [:error] [pid 14116:tid 1380] [client ::1:54589] PHP Stack trace:
+[Sun Mar 24 10:31:11.920069 2019] [:error] [pid 14116:tid 1380] [client ::1:54589] PHP   1. {main}() D:\\rpaulhus\\UwAmp\\www\\index.php:0
+[Sun Mar 24 10:31:11.920069 2019] [:error] [pid 14116:tid 1380] [client ::1:54589] PHP   2. mysqli->mysqli() D:\\rpaulhus\\UwAmp\\www\\index.php:7
+[Sun Mar 24 10:31:30.039221 2019] [:error] [pid 14116:tid 1380] [client ::1:54594] PHP Warning:  mysqli::mysqli(): (HY000/1049): Unknown database 'dealership' in D:\\rpaulhus\\UwAmp\\www\\index.php on line 7
+[Sun Mar 24 10:31:30.039221 2019] [:error] [pid 14116:tid 1380] [client ::1:54594] PHP Stack trace:
+[Sun Mar 24 10:31:30.039221 2019] [:error] [pid 14116:tid 1380] [client ::1:54594] PHP   1. {main}() D:\\rpaulhus\\UwAmp\\www\\index.php:0
+[Sun Mar 24 10:31:30.039221 2019] [:error] [pid 14116:tid 1380] [client ::1:54594] PHP   2. mysqli->mysqli() D:\\rpaulhus\\UwAmp\\www\\index.php:7
+[Sun Mar 24 10:31:54.864076 2019] [:error] [pid 14116:tid 1380] [client ::1:54598] PHP Warning:  mysqli::mysqli(): (HY000/1049): Unknown database 'dealership' in D:\\rpaulhus\\UwAmp\\www\\index.php on line 8
+[Sun Mar 24 10:31:54.864076 2019] [:error] [pid 14116:tid 1380] [client ::1:54598] PHP Stack trace:
+[Sun Mar 24 10:31:54.864076 2019] [:error] [pid 14116:tid 1380] [client ::1:54598] PHP   1. {main}() D:\\rpaulhus\\UwAmp\\www\\index.php:0
+[Sun Mar 24 10:31:54.864577 2019] [:error] [pid 14116:tid 1380] [client ::1:54598] PHP   2. mysqli->mysqli() D:\\rpaulhus\\UwAmp\\www\\index.php:8
+[Sun Mar 24 10:32:31.452981 2019] [:error] [pid 14116:tid 1380] [client ::1:54629] PHP Notice:  Undefined variable: conn in D:\\rpaulhus\\UwAmp\\www\\index.php on line 9
+[Sun Mar 24 10:32:31.452981 2019] [:error] [pid 14116:tid 1380] [client ::1:54629] PHP Stack trace:
+[Sun Mar 24 10:32:31.452981 2019] [:error] [pid 14116:tid 1380] [client ::1:54629] PHP   1. {main}() D:\\rpaulhus\\UwAmp\\www\\index.php:0
+[Sun Mar 24 10:32:31.452981 2019] [:error] [pid 14116:tid 1380] [client ::1:54629] PHP Warning:  mysqli_query() expects parameter 1 to be mysqli, null given in D:\\rpaulhus\\UwAmp\\www\\index.php on line 9
+[Sun Mar 24 10:32:31.453984 2019] [:error] [pid 14116:tid 1380] [client ::1:54629] PHP Stack trace:
+[Sun Mar 24 10:32:31.453984 2019] [:error] [pid 14116:tid 1380] [client ::1:54629] PHP   1. {main}() D:\\rpaulhus\\UwAmp\\www\\index.php:0
+[Sun Mar 24 10:32:31.453984 2019] [:error] [pid 14116:tid 1380] [client ::1:54629] PHP   2. mysqli_query() D:\\rpaulhus\\UwAmp\\www\\index.php:9
+[Sun Mar 24 10:32:31.453984 2019] [:error] [pid 14116:tid 1380] [client ::1:54629] PHP Notice:  Undefined variable: conn in D:\\rpaulhus\\UwAmp\\www\\index.php on line 12
+[Sun Mar 24 10:32:31.453984 2019] [:error] [pid 14116:tid 1380] [client ::1:54629] PHP Stack trace:
+[Sun Mar 24 10:32:31.453984 2019] [:error] [pid 14116:tid 1380] [client ::1:54629] PHP   1. {main}() D:\\rpaulhus\\UwAmp\\www\\index.php:0
+[Sun Mar 24 10:32:31.453984 2019] [:error] [pid 14116:tid 1380] [client ::1:54629] PHP Warning:  mysqli_error() expects parameter 1 to be mysqli, null given in D:\\rpaulhus\\UwAmp\\www\\index.php on line 12
+[Sun Mar 24 10:32:31.453984 2019] [:error] [pid 14116:tid 1380] [client ::1:54629] PHP Stack trace:
+[Sun Mar 24 10:32:31.453984 2019] [:error] [pid 14116:tid 1380] [client ::1:54629] PHP   1. {main}() D:\\rpaulhus\\UwAmp\\www\\index.php:0
+[Sun Mar 24 10:32:31.453984 2019] [:error] [pid 14116:tid 1380] [client ::1:54629] PHP   2. mysqli_error() D:\\rpaulhus\\UwAmp\\www\\index.php:12
+[Sun Mar 24 10:32:31.456991 2019] [:error] [pid 14116:tid 1380] [client ::1:54629] PHP Warning:  mysqli::mysqli(): (HY000/1049): Unknown database 'dealership' in D:\\rpaulhus\\UwAmp\\www\\index.php on line 17
+[Sun Mar 24 10:32:31.456991 2019] [:error] [pid 14116:tid 1380] [client ::1:54629] PHP Stack trace:
+[Sun Mar 24 10:32:31.456991 2019] [:error] [pid 14116:tid 1380] [client ::1:54629] PHP   1. {main}() D:\\rpaulhus\\UwAmp\\www\\index.php:0
+[Sun Mar 24 10:32:31.456991 2019] [:error] [pid 14116:tid 1380] [client ::1:54629] PHP   2. mysqli->mysqli() D:\\rpaulhus\\UwAmp\\www\\index.php:17
+[Sun Mar 24 10:34:01.850191 2019] [:error] [pid 14116:tid 1380] [client ::1:54715] PHP Warning:  mysqli::mysqli(): (HY000/1045): Access denied for user 'root'@'localhost' (using password: NO) in D:\\rpaulhus\\UwAmp\\www\\index.php on line 7
+[Sun Mar 24 10:34:01.850191 2019] [:error] [pid 14116:tid 1380] [client ::1:54715] PHP Stack trace:
+[Sun Mar 24 10:34:01.850191 2019] [:error] [pid 14116:tid 1380] [client ::1:54715] PHP   1. {main}() D:\\rpaulhus\\UwAmp\\www\\index.php:0
+[Sun Mar 24 10:34:01.850191 2019] [:error] [pid 14116:tid 1380] [client ::1:54715] PHP   2. mysqli->mysqli() D:\\rpaulhus\\UwAmp\\www\\index.php:7
+[Sun Mar 24 11:44:29.376428 2019] [mpm_winnt:crit] [pid 14116:tid 684] AH02538: Child: Parent process exited abruptly. Child process is ending
