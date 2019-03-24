@@ -12,16 +12,18 @@ if ($conn->connect_error) {
 } 
 
 // sql to create table
-$sql = "CREATE TABLE MyGuests (
-id INT(6) UNSIGNED AUTO_INCREMENT PRIMARY KEY, 
-firstname VARCHAR(30) NOT NULL,
-lastname VARCHAR(30) NOT NULL,
-email VARCHAR(50),
-reg_date TIMESTAMP
+$sql = "CREATE TABLE vehicle (
+VIN INT(17) UNSIGNED AUTO_INCREMENT PRIMARY KEY, 
+Year INT(4) NOT NULL,
+Model VARCHAR(30) NOT NULL,
+Edition VARCHAR(2),
+KM INT(7),
+Colour_Exterior VARCHAR(30),
+Colour_Interior VARCHAR(30),
 )";
 
 if ($conn->query($sql) === TRUE) {
-    echo "Table MyGuests created successfully";
+    echo "Vehicle Table created successfully";
 } else {
     echo "Error creating table: " . $conn->error;
 }
