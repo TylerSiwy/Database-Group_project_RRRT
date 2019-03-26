@@ -1,5 +1,5 @@
 <?php
-function create_used_vehicle_table(){
+function create_sale_table(){
 $servername = "localhost";
 $username = "root";
 $password = "";
@@ -13,19 +13,18 @@ if ($conn->connect_error) {
 } 
 
 // sql to create table
-$sql = "CREATE TABLE Used_Vehicle (
-    vin varchar(20),
-    current_kilometers int,
-    bought_from varchar(20),
-    purchase_location varchar(20),
-    price_paid numeric(9,2),
-    book_price numeric(9,2),
-    primary key(vin),
-    foreign key(vin) references Vehicle(vin))
+$sql = "CREATE TABLE Sale (
+    sid char(5),
+    intrest_rate numeric(4,2),
+    sale_price numeric(9,2),
+    downpayment numeric(9,2),
+    comission numeric(9,2),
+    sale_date date,  /*date datatype*/
+    primary key(sid))
 ";
 
 if ($conn->query($sql) === TRUE) {
-    echo "Vehicle Table created successfully"."<br>";
+    echo "Sale Table created successfully"."<br>";
 } else {
     echo "Error creating table: " . $conn->error."<br>";
 }

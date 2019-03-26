@@ -1,5 +1,5 @@
 <?php
-function create_used_vehicle_table(){
+function create_employee_table(){
 $servername = "localhost";
 $username = "root";
 $password = "";
@@ -9,20 +9,17 @@ $dbname = "Dealership";
 $conn = new mysqli($servername, $username, $password, $dbname);
 // Check connection
 if ($conn->connect_error) {
-    die("Connection failed: " . $conn->connect_error."<br>");
+    die("Connection failed: " . $conn->connect_error);
 } 
 
 // sql to create table
-$sql = "CREATE TABLE Used_Vehicle (
-    vin varchar(20),
-    current_kilometers int,
-    bought_from varchar(20),
-    purchase_location varchar(20),
-    price_paid numeric(9,2),
-    book_price numeric(9,2),
-    primary key(vin),
-    foreign key(vin) references Vehicle(vin))
-";
+$sql = "CREATE TABLE Employee (
+    eid char(5),
+    first_name varchar(20), 
+    last_name varchar(20),
+    phone_number varchar(10),
+    primary key(eid))";
+;
 
 if ($conn->query($sql) === TRUE) {
     echo "Vehicle Table created successfully"."<br>";

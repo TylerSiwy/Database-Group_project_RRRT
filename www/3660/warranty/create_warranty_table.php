@@ -1,5 +1,5 @@
 <?php
-function create_customer_table(){
+function create_warranty_table(){
 $servername = "localhost";
 $username = "root";
 $password = "";
@@ -13,22 +13,18 @@ if ($con->connect_error) {
 } 
 
 // sql to create table
-$sql = "CREATE TABLE Customer (
-	cid integer(20) UNSIGNED AUTO_INCREMENT,
-    first_name varchar(20), 
-    last_name varchar(20), 
-    dob varchar(10),
-    gender varchar(20),
-    street integer(10), 
-    province varchar(100), 
-    city varchar(100),
-    postal_code varchar(100),
-    phone_number varchar(10),
-    primary key(cid)
-)";
+$sql = "CREATE TABLE Warranty (
+    policy_number char(5),
+    co_signer varchar(40),
+    warranty_length int, /*months*/
+    start_date date,  /*date datatype*/
+    deductible numeric(9,2),
+    price numeric(9,2),
+    primary key(policy_number))
+";
 
 if ($con->query($sql) === TRUE) {
-    echo "Customer Table created successfully"."<br>";
+    echo "Warranty created successfully"."<br>";
 } else {
     echo "Error creating table: " . $con->error."<br>";
 }

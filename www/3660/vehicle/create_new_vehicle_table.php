@@ -1,5 +1,5 @@
 <?php
-function create_used_vehicle_table(){
+function create_new_vehicle_table(){
 $servername = "localhost";
 $username = "root";
 $password = "";
@@ -13,13 +13,10 @@ if ($conn->connect_error) {
 } 
 
 // sql to create table
-$sql = "CREATE TABLE Used_Vehicle (
-    vin varchar(20),
-    current_kilometers int,
-    bought_from varchar(20),
-    purchase_location varchar(20),
-    price_paid numeric(9,2),
-    book_price numeric(9,2),
+$sql = "CREATE TABLE New_Vehicle (
+    vin char(17),
+    expected_km int,
+    msrp numeric(9,2),
     primary key(vin),
     foreign key(vin) references Vehicle(vin))
 ";

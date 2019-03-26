@@ -1,5 +1,5 @@
 <?php
-function create_customer_table(){
+function create_sale_vehicle_table(){
 $servername = "localhost";
 $username = "root";
 $password = "";
@@ -13,22 +13,16 @@ if ($con->connect_error) {
 } 
 
 // sql to create table
-$sql = "CREATE TABLE Customer (
-	cid integer(20) UNSIGNED AUTO_INCREMENT,
-    first_name varchar(20), 
-    last_name varchar(20), 
-    dob varchar(10),
-    gender varchar(20),
-    street integer(10), 
-    province varchar(100), 
-    city varchar(100),
-    postal_code varchar(100),
-    phone_number varchar(10),
-    primary key(cid)
-)";
+$sql = "CREATE TABLE Sale_Vehicle (
+    vin char(5),
+    sid char(5),
+    primary key(sid),
+    foreign key(vin) references Vehicles(vin),
+    foreign key(sid) references Sale(sid));
+";
 
 if ($con->query($sql) === TRUE) {
-    echo "Customer Table created successfully"."<br>";
+    echo "Sale vehicle Table created successfully"."<br>";
 } else {
     echo "Error creating table: " . $con->error."<br>";
 }

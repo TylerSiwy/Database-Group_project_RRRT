@@ -1,4 +1,15 @@
-<!DOCTYPE html>
+<?php
+include 'database_initial_setup.php';
+
+$servername = "localhost";
+$username = "root";
+$password = "";
+$dbname = "Dealership";
+
+//Checks for, then creates database, tables, and populates with data
+database_setup(); 
+
+?>
 <html>
 <head>
 	<title>Database</title>
@@ -14,3 +25,5 @@
 
 </body>
 </html>
+<?php
+?>
