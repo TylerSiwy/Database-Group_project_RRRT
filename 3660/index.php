@@ -1,6 +1,6 @@
 <?php
 include 'database_initial_setup.php';
-
+include 'test_query.php';
 $servername = "localhost";
 $username = "root";
 $password = "";
@@ -21,7 +21,7 @@ database_setup();
 	<a href="/3660/sales/Vehicle_Sale.html"><button>Vehicle_Sale</button></a>
 	<a href="/3660/warranty/Vehicle_Warranty.html"><button>Vehicle_Warranty</button></a>
 	<a href="/3660/vehicle/New_Vehicle.html"><button>Add Vehicle</button></a>
-	<a href="/3660/vehicle/Used_Vehicle.html"><button>Add Used Vehicle</button></a>
+	<a href="test_query.php"><button>Test Query 1</button></a>
 
 </body>
 </html>

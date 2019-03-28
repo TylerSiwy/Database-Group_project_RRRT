@@ -14,18 +14,19 @@ if ($con->connect_error) {
 
 // sql to create table
 $sql = "CREATE TABLE Customer (
-	cid integer(20) UNSIGNED AUTO_INCREMENT,
+    cid char(5),
     first_name varchar(20), 
     last_name varchar(20), 
-    dob varchar(10),
+    dob date,  /*date datatype*/
     gender varchar(20),
-    street integer(10), 
-    province varchar(100), 
-    city varchar(100),
-    postal_code varchar(100),
+    building_number int,
+    street varchar(20), 
+    city varchar(20),
+    province varchar(20), 
+    postal_code char(6),
     phone_number varchar(10),
-    primary key(cid)
-)";
+    primary key(cid));
+";
 
 if ($con->query($sql) === TRUE) {
     echo "Customer Table created successfully"."<br>";

@@ -14,7 +14,7 @@ if ($con->connect_error) {
 
 // sql to create table
 $sql = "CREATE TABLE Sale_Vehicle (
-    vin char(5),
+    vin char(17),
     sid char(5),
     primary key(sid),
     foreign key(vin) references Vehicles(vin),
