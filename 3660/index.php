@@ -1,20 +1,16 @@
 <?php
 include 'database_initial_setup.php';
-include 'test_query.php';
 $servername = "localhost";
 $username = "root";
 $password = "";
 $dbname = "Dealership";
-
-//Checks for, then creates database, tables, and populates with data
-database_setup(); 
 
 ?>
 <html>
 <head>
 	<title>Database</title>
 </head>
-<body bgcolor="#666666">
+<body bgcolor="#C0C0C0">
 
 	<a href="index.php"><button>Home</button></a>
 	<a href="/3660/customer/Customer.html"><button>Customer</button></a>
@@ -24,6 +20,9 @@ database_setup();
 	<a href="test_query.php"><button>Test Query 1</button></a>
 
 </body>
+<br><br><br>
 </html>
 <?php
+//Checks for, then creates database, tables, and populates with data
+database_setup(); 
 ?>
