@@ -57,10 +57,11 @@ function database_setup(){
         //Insertions
 
         insertSQL("Vehicle", 
-        "INSERT INTO Vehicle VALUES('1HGBH41JXMN109186','1997','camry','CE',200, 'purple','purple','2019-10-20');
-        INSERT INTO Vehicle VALUES('9ZGBH41JXMN109185','2000','corolla','XE',100, 'yellow','purple','2010-04-30');
-        INSERT INTO Vehicle VALUES('2BGBH41JXMN109185','2019','rav4','BE',10, 'yellow','purple','2019-04-30');
-        INSERT INTO Vehicle VALUES('3B22H41JXMN109185','2019','rav4','BE',10, 'yellow','purple','2019-02-30');");
+        "INSERT INTO Vehicle VALUES('1HGBH41JXMN109186','1997','camry','CE','purple','purple','2019-10-20');
+        INSERT INTO Vehicle VALUES('9ZGBH41JXMN109185','2000','corolla','XE','yellow','purple','2010-04-30');
+        INSERT INTO Vehicle VALUES('2BGBH41JXMN109185','2019','rav4','BE','yellow','purple','2019-04-30');
+        INSERT INTO Vehicle VALUES('3B22H41JXMN109185','2019','rav4','BE','yellow','purple','2019-02-20');
+        INSERT INTO Vehicle VALUES('G5GHSS3K5DBF4HD5H','2006','camry','LE','pink','lime','2018-09-08');");
 
         insertSQL("New_Vehicle", 
         "INSERT INTO New_Vehicle VALUES('2BGBH41JXMN109185',10,2000.00);
