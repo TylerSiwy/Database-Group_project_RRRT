@@ -96,6 +96,7 @@ $dbname = "Dealership";
 
 <ul class="top-level-menu">
     <li><a href="index.php">Home</a></li>
+    <li><a href="customer/New_Customer.html">New Customer</a></li>
     <li>
 	<a href="#">Sell A Vehicle</a>
 	<ul class="second-level-menu">
@@ -109,11 +110,11 @@ $dbname = "Dealership";
     </ul>
     <li><a href="#">Employee</a>
 	<ul class="second-level-menu">
-		<li><a href="#">View Employee</a></li>
-		<li><a href="#">New Employee</a></li>
+		<li><a href="employee/View_Employee.html">View Employee</a></li>
+		<li><a href="employee/New_Employee.html">New Employee</a></li>
     </ul>
-    <li><a href="#">Add A Repair Ticket</a></li>
-    <li><a href="#">Add A Warranty</a></li>
+    <li><a href="vehicle/Vehicle_Repair.html">Add A Repair Ticket</a></li>
+    <li><a href="warranty/New_Warranty.html">Add A Warranty</a></li>
 </ul>
 
 

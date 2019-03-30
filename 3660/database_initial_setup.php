@@ -2,7 +2,7 @@
 include 'vehicle/create_vehicle_table.php';
 include 'vehicle/create_used_vehicle_table.php';
 include 'vehicle/create_new_vehicle_table.php';
-include 'create_customer_table.php';
+include 'customer/create_customer_table.php';
 include 'sales/create_sale_table.php';
 include 'employee/create_employee_table.php';
 include 'warranty/create_warranty_table.php';
@@ -94,13 +94,13 @@ function database_setup(){
         INSERT INTO items_covered VALUES('P-234', 'Left Tire');
         INSERT INTO items_covered VALUES('P-345', 'Muffler');
         INSERT INTO items_covered VALUES('P-456', 'Right Passenger Set');
-        INSERT INTO items_covered VALUES('P-567', 'N/A');
-        ");
+        INSERT INTO items_covered VALUES('P-567', 'N/A');");
 
         insertSQL("Customer",
-        "INSERT INTO Customer VALUES('C-000', 'Rylan', 'Bueckert', '1997-09-18', 'Male', 1230, '3 Ave', 'La Crete', 'Alberta', 'T0H2H0', '7809283127');
-        INSERT INTO Customer VALUES('C-001', 'Ryan', 'Wenman', '1940-02-14', 'Male', 30445, '66 Street', 'Airdrie', 'Alberta', 'T4A6G9', '6664206969');
-        INSERT INTO Customer VALUES('C-002', 'Tyler', 'Siwy', '1992-09-02', 'Male', 420, '69 Street', 'Calgary', 'Alberta', 'T5P4H0', '457285347');");
+        "INSERT INTO Customer values('Rylan', 'Bueckert', '1997-09-18', 'Male', 1230, '3 Ave', 'La Crete', 'Alberta', 'T0H2H0', '7809283127');
+        insert into Customer values('Ryan', 'Wenman', '1940-02-14', 'Male', 30445, '66 Street', 'Airdrie', 'Alberta', 'T4A6G9', '6664206969');
+        insert into Customer values('Tyler', 'Siwy', '1992-09-02', 'Male', 420, '69 Street', 'Calgary', 'Alberta', 'T5P4H0', '457285347');
+        ");
 
         insertSQL("Sale_Customer",
         "INSERT INTO Sale_Customer VALUES('C-000', 'S-345');

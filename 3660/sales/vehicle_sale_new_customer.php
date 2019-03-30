@@ -11,24 +11,24 @@ $con = new mysqli($servername, $username, $password, $dbname);
 if ($con->connect_error) {
 die("Connection failed: " . $con->connect_error);
 }
-//For New_Vehicle Insertion
-$VIN = isset($_POST["vin_input"]) ? (int)$_POST["vin_input"]:-1;
-$expected_kms = isset($_POST["expected_kms_input"]) ? (int)$_POST["expected_kms_input"]:-1;
-$msrp = $_POST["msrp_input"];
 
-//For Vehicle Insertion
-$Year = (int)$_POST["year_input"];
-$Model = $_POST["model_input"];
-$Edition = $_POST["edition_input"];
-$Colour_Interior= $_POST["colour_interior_input"];
-$Colour_Exterior= $_POST["colour_exterior_input"];
-$Purchase_Date = $_POST["purchase-date_input"];
+//For Customer
+$VIN = $_POST['']
+$first = $_POST["first_input"];
+$last = $_POST["last_input"];
+$dob = $_POST["dob_input"];
+$gender = $_POST["gender_input"];
+$street = (int)$_POST["street_input"];
+$province = $_POST["province_input"];
+$city = $_POST["city_input"];
+$postal_code = $_POST["postal_input"];
+$phone_number = $_POST["phone_input"];
 
-
-// Insertion
-$sql="INSERT INTO New_Vehicle
-VALUES
-($VIN, $expected_kms, $msrp)";
+$sql="INSERT INTO customer 
+(first_name, last_name, dob, gender, street, province, city, postal_code, phone_number) 
+VALUES 
+('$cid', '$first', '$last', '$dob', '$gender', '$street', '$province', '$city', 
+'$postal_code', '$phone_number')";
 
 // Check if it worked correctly
 if(mysqli_query($con, $sql)){
@@ -39,8 +39,6 @@ echo "ERROR: Could not able to execute $sql. " . mysqli_error($con);
 
 mysqli_close($con);
 
-//Insert into Vehicle as well
-vehicleInsertion($VIN, $Year, $Model, $Edition,
-	 $Colour_Exterior, $Colour_Interior, $Purchase_Date);
+//Delete vehicle using VIN
 
 ?>
