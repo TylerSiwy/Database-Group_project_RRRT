@@ -84,13 +84,24 @@ body {
     color: black; 
 }
 
-div.container
+.title
 {
-    background: grey;
+    text-align: center;
+    font-size: 30px;
+}
+
+.employee_container
+{
+    display: grid;
+    grid-template-columns: repeat(3, 33vw);
+    background-color: #ccc;
+    color: #000;
 }
 
 .item 
 {
-    background: lightgrey;
-    color: red;
+    background-color: #444;
+    color: #fff;
+    font-size: 20px;
+    text-align: center;
 }
