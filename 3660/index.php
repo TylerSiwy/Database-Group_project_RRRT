@@ -101,7 +101,7 @@ $dbname = "Dealership";
 	<a href="#">Sell A Vehicle</a>
 	<ul class="second-level-menu">
 		<li><a href="sales/Vehicle_Sale_New_Customer.html">New Customer</a></li>
-        <li><a href="#">Existing Customer</a></li>
+        <li><a href="sales/Vehicle_Sale_Old_Customer.html">Existing Customer</a></li>
 	</ul>
     <li><a href="#">Buy A Vehicle</a>
 	<ul class="second-level-menu">

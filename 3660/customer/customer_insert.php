@@ -54,14 +54,14 @@
     die("Connection failed: " . $con->connect_error);
 	}
 	$sql = "INSERT INTO Employment_History (first_name, last_name, phone_number, _start_date, job_title , 
-	supervisor, company_name, phone_number, street, province, city, postal_code) 
-	VALUES ($first, \"$last\", \"$phone_number\", \"$start_date\", \"$job_title\", \"$supervisor\", 
+	supervisor, company_name, company_phone_number, street, province, city, postal_code) 
+	VALUES (\"$first\", \"$last\", \"$phone_number\", \"$start_date\", \"$job_title\", \"$supervisor\", 
 	\"$company_name\", \"$company_number\", \"$company_street\", \"$company_province\", \"$company_city\",
 	 \"$company_postal_code\")";
 
 	// Check if it worked correctly
 	if(mysqli_query($con, $sql)){
-    echo "Records inserted successfully.";
+    echo "Customer inserted successfully.";
 	} else{
     echo "ERROR: Could not able to execute $sql. " . mysqli_error($con);
 	}

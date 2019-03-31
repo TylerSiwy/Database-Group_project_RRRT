@@ -18,7 +18,7 @@ $sql = "CREATE TABLE Sale (
     intrest_rate numeric(4,2),
     sale_price numeric(9,2),
     downpayment numeric(9,2),
-    comission numeric(9,2),
+    commission numeric(9,2),
     sale_date date,  /*date datatype*/
     primary key(sid))
 ";

@@ -128,8 +128,9 @@ function database_setup(){
         INSERT INTO Payments VALUES('S-345','n-223','2019-11-11',15,2000,723854345);
         INSERT INTO Payments VALUES('S-345','n-323','2019-12-12',15,2000,723854345);");
 
-        insertSQL("Employment_History","INSERT INTO Employment_History VALUES('C-000','2019-10-10','apple-picker','joey','joeys only','4039283433',21,'alberta','airdrie','T4B1W2');
-        INSERT INTO Employment_History VALUES('C-002','2019-09-10','apple-dropper','joey','joeys only','4039283433',21,'alberta','airdrie','T4B1W2');");
+        insertSQL("Employment_History","INSERT INTO Employment_History VALUES('Rylan', 'Bueckert', '7809283127', '2019-10-10','apple-picker','joey','joeys only','4039283433',21,'alberta','airdrie','T4B1W2');
+        INSERT INTO Employment_History VALUES('Ryan', 'Wenman', '6664206969','2019-09-10','apple-dropper','joey','joeys only','4039283433',21,'alberta','airdrie','T4B1W2');
+        ");
 
     } else {
         echo "Database not created: " . $con->error."<br>";
