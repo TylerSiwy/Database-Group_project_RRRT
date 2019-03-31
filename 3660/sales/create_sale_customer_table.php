@@ -15,10 +15,10 @@ if ($con->connect_error) {
 // sql to create table
 $sql = "CREATE TABLE  Sale_Customer (
     cid char(5),
-    sid char(5),
-    primary key(sid),
+    _sid char(5),
+    primary key(_sid),
     foreign key(cid) references Customer(cid),
-    foreign key(sid) references Sale(sid))
+    foreign key(_sid) references Sale(_sid))
 ";
 
 if ($con->query($sql) === TRUE) {

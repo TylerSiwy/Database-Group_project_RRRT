@@ -14,14 +14,14 @@ if ($con->connect_error) {
 
 // sql to create table
 $sql = "CREATE TABLE  Payments (
-    sid char(5),
+    _sid char(5),
     payment_number char(5),
     paid_date date, /*date datatype*/
     due_date int, /*day of the month*/
     amount int,
     bank_account int,
-    primary key(sid, payment_number),
-    foreign key(sid) references Sale(sid))
+    primary key(_sid, payment_number),
+    foreign key(_sid) references Sale(_sid))
 ";
 
 if ($con->query($sql) === TRUE) {

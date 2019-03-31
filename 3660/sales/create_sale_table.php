@@ -14,13 +14,13 @@ if ($conn->connect_error) {
 
 // sql to create table
 $sql = "CREATE TABLE Sale (
-    sid char(5),
+    _sid char(5),
     intrest_rate numeric(4,2),
     sale_price numeric(9,2),
     downpayment numeric(9,2),
     commission numeric(9,2),
     sale_date date,  /*date datatype*/
-    primary key(sid))
+    primary key(_sid))
 ";
 
 if ($conn->query($sql) === TRUE) {

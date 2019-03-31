@@ -83,11 +83,11 @@ function database_setup(){
         INSERT INTO Employee VALUES('E-666', 'Simon', 'Pegg', 232116764);");
 
         insertSQL("Warranty",
-        "INSERT INTO Warranty VALUES('P-123', 'Tom', 12, '2019-03-25', 100.00, 1000.00);
-        INSERT INTO Warranty VALUES('P-234', 'Jimmy', 12, '2019-03-24', 100.00, 1000.00);
-        INSERT INTO Warranty VALUES('P-456', 'Greg', 12, '2019-03-23', 100.00, 1000.00);
-        INSERT INTO Warranty VALUES('P-567', 'Chris', 12, '2019-03-22', 100.00, 1000.00);
-        INSERT INTO Warranty VALUES('P-678', 'Deb', 12, '2019-03-21', 100.00, 1000.00);");
+        "INSERT INTO Warranty VALUES('P-123', 12, 100.00, 1000.00);
+        INSERT INTO Warranty VALUES('P-234', 12, 100.00, 1000.00);
+        INSERT INTO Warranty VALUES('P-456',  12, 100.00, 1000.00);
+        INSERT INTO Warranty VALUES('P-567', 12, 100.00, 1000.00);
+        INSERT INTO Warranty VALUES('P-678', 12, 100.00, 1000.00);");
 
         insertSQL("items_covered", 
         "INSERT INTO items_covered VALUES('P-123', 'Windshield');
@@ -116,9 +116,9 @@ function database_setup(){
         INSERT INTO Sale_Vehicle VALUES('9ZGBH41JXMN109185', 'S-117');
         INSERT INTO Sale_Vehicle VALUES('3B22H41JXMN109185', 'S-454');");
 
-        insertSQL("Vehicle_Warranty", "INSERT INTO Vehicle_Warranty VALUES('P-123', '1HGBH41JXMN109186');
-        INSERT INTO Vehicle_Warranty VALUES('P-234', '9ZGBH41JXMN109185');
-        INSERT INTO Vehicle_Warranty VALUES('P-456', '2BGBH41JXMN109185');");
+        insertSQL("Vehicle_Warranty", "INSERT INTO Vehicle_Warranty VALUES('P-123', '1HGBH41JXMN109186', 'Timmy');
+        INSERT INTO Vehicle_Warranty VALUES('P-234', '9ZGBH41JXMN109185', 'Tommathy');
+        INSERT INTO Vehicle_Warranty VALUES('P-456', '2BGBH41JXMN109185', 'Tim');");
 
         insertSQL("Repairs","INSERT INTO Repairs VALUES('9ZGBH41JXMN109185', 'flat rear left tire', 100, 98.76);
         INSERT INTO Repairs VALUES('1HGBH41JXMN109186', 'flat rear left tire', 100, 98.76);

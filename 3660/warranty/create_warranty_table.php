@@ -15,12 +15,10 @@ if ($con->connect_error) {
 // sql to create table
 $sql = "CREATE TABLE Warranty (
     policy_number char(5),
-    co_signer varchar(40),
     warranty_length int, /*months*/
-    _start_date date,  /*date datatype*/
     deductible numeric(9,2),
     price numeric(9,2),
-    primary key(policy_number))
+    primary key(policy_number));
 ";
 
 if ($con->query($sql) === TRUE) {
