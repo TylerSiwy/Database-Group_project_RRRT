@@ -17,11 +17,12 @@ $sql = "CREATE TABLE Vehicle (
     vin char(17),
     year int, /* year datatype*/
     model varchar(20),
-    _edition char(2),
+    edition char(2),
     interior_color varchar(20),
     exterior_color varchar(20),
     purchase_date date, /*date datatype*/
-    primary key(vin));";
+    primary key(vin, purchase_date));
+";
 
 if ($conn->query($sql) === TRUE) {
     echo "Vehicle Table created successfully"."<br>";

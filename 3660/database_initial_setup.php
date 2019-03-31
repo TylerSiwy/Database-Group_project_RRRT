@@ -65,12 +65,13 @@ function database_setup() {
         INSERT INTO Vehicle VALUES('G5GHSS3K5DBF4HD5H','2006','camry','LE','pink','lime','2018-09-08');");
 
         insertSQL("New_Vehicle", 
-        "INSERT INTO New_Vehicle VALUES('2BGBH41JXMN109185',10,2000.00);
-        INSERT INTO New_Vehicle VALUES('3B22H41JXMN109185',20,4000.00);");
+        "INSERT INTO New_Vehicle VALUES('2BGBH41JXMN109185','2019-04-30',10,2000.00);
+        INSERT INTO New_Vehicle VALUES('3B22H41JXMN109185','2019-02-20',20,4000.00);");
 
         insertSQL("Used_Vehicle", 
-        "INSERT INTO Used_Vehicle VALUES('1HGBH41JXMN109186',200,'steven','person','0002500.00','0001500.00');
-        INSERT INTO Used_Vehicle VALUES('9ZGBH41JXMN109185',200,'toyota motor','toyota motor','2000.00','2500.00');");
+        "INSERT INTO Used_Vehicle VALUES('1HGBH41JXMN109186', '2019-10-20', 200,'steven','person', 2500.00,1500.00);
+        INSERT INTO Used_Vehicle VALUES('9ZGBH41JXMN109185','2010-04-30',200,'toyota motor','toyota motor',2000.00,2500.00);
+        INSERT INTO Used_Vehicle VALUES('G5GHSS3K5DBF4HD5H','2018-09-08',150000,'Ryan Wenman','Ryans house',1600.00, 2000.00);");
 
         insertSQL("Sale", 
         "INSERT INTO Sale VALUES('S-345', 1.2, 10000.00, 10.00, 10.00, '2018-03-01');    
@@ -84,11 +85,11 @@ function database_setup() {
         INSERT INTO Employee VALUES('E-666', 'Simon', 'Pegg', 232116764);");
 
         insertSQL("Warranty",
-        "INSERT INTO Warranty VALUES('P-123', 12, 100.00, 1000.00);
-        INSERT INTO Warranty VALUES('P-234', 12, 100.00, 1000.00);
-        INSERT INTO Warranty VALUES('P-456',  12, 100.00, 1000.00);
-        INSERT INTO Warranty VALUES('P-567', 12, 100.00, 1000.00);
-        INSERT INTO Warranty VALUES('P-678', 12, 100.00, 1000.00);");
+        "INSERT INTO Warranty VALUES('P-123', 12);
+        INSERT INTO Warranty VALUES('P-234', 12);
+        INSERT INTO Warranty VALUES('P-456',  12);
+        INSERT INTO Warranty VALUES('P-567', 12);
+        INSERT INTO Warranty VALUES('P-678', 12);");
 
         insertSQL("items_covered", 
         "INSERT INTO items_covered VALUES('P-123', 'Windshield');
@@ -113,17 +114,19 @@ function database_setup() {
         INSERT INTO Sale_Employee VALUES('E-666', 'S-117');
         INSERT INTO Sale_Employee VALUES('E-117', 'S-454');");
 
-        insertSQL("Sale_Vehicle","INSERT INTO Sale_Vehicle VALUES('1HGBH41JXMN109186', 'S-345');
-        INSERT INTO Sale_Vehicle VALUES('9ZGBH41JXMN109185', 'S-117');
-        INSERT INTO Sale_Vehicle VALUES('3B22H41JXMN109185', 'S-454');");
+        insertSQL("Vehicle_Warranty","INSERT INTO Vehicle_Warranty VALUES('P-123', 'S-345', 5000, 500,'Timmy');
+        INSERT INTO Vehicle_Warranty VALUES('P-234', 'S-117', 1000, 1000, 'Tommathy');
+        INSERT INTO Vehicle_Warranty VALUES('P-456', 'S-454', 2000, 700, 'Tim');");
 
-        insertSQL("Vehicle_Warranty", "INSERT INTO Vehicle_Warranty VALUES('P-123', '1HGBH41JXMN109186', 'Timmy');
-        INSERT INTO Vehicle_Warranty VALUES('P-234', '9ZGBH41JXMN109185', 'Tommathy');
-        INSERT INTO Vehicle_Warranty VALUES('P-456', '2BGBH41JXMN109185', 'Tim');");
+        insertSQL("Sale_Vehicle", "INSERT INTO Sale_Vehicle VALUES('1HGBH41JXMN109186', '2019-10-20', 'S-345');
+        INSERT INTO Sale_Vehicle VALUES('9ZGBH41JXMN109185', '2010-04-30', 'S-117');
+        INSERT INTO Sale_Vehicle VALUES('3B22H41JXMN109185', '2019-02-20', 'S-454');
+        INSERT INTO Sale_Vehicle VALUES('G5GHSS3K5DBF4HD5H', '2018-09-08', 'S-420');
+        ");
 
-        insertSQL("Repairs","INSERT INTO Repairs VALUES('9ZGBH41JXMN109185', 'flat rear left tire', 100, 98.76);
-        INSERT INTO Repairs VALUES('1HGBH41JXMN109186', 'flat rear left tire', 100, 98.76);
-        INSERT INTO Repairs VALUES('1HGBH41JXMN109186', 'worn brake', 250, 286.21);");
+        insertSQL("Repairs","INSERT INTO Repairs VALUES('9ZGBH41JXMN109185', '2010-04-30', 'flat rear left tire', 100, 98.76);
+        INSERT INTO Repairs VALUES('1HGBH41JXMN109186', '2019-10-20', 'flat rear left tire', 100, 98.76);
+        INSERT INTO Repairs VALUES('1HGBH41JXMN109186', '2019-10-20', 'worn brake', 250, 286.21);");
 
         insertSQL("Payments","INSERT INTO Payments VALUES('S-345','n-123','2019-10-10',15,2000,723854345);
         INSERT INTO Payments VALUES('S-345','n-223','2019-11-11',15,2000,723854345);

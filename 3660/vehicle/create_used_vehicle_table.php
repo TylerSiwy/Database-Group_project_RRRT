@@ -14,15 +14,15 @@ if ($conn->connect_error) {
 
 // sql to create table
 $sql = "CREATE TABLE Used_Vehicle (
-    vin varchar(20),
-    current_kilometers int,
+    vin varchar(17),
+    purchase_date date,
+    current_km int,
     bought_from varchar(20),
     purchase_location varchar(20),
     price_paid numeric(9,2),
     book_price numeric(9,2),
-    primary key(vin),
-    foreign key(vin) references Vehicle(vin))
-";
+    primary key(vin, purchase_date),
+    foreign key(vin, purchase_date) references Vehicle(vin, purchase_date));";
 
 if ($conn->query($sql) === TRUE) {
     echo "Vehicle Table created successfully"."<br>";

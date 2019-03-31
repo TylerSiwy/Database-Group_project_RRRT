@@ -1,5 +1,5 @@
-
 <?php
+include "../credentials.php";
 $servername = getServerName();
 $username = getUserName();
 $password = getPassword();
@@ -9,11 +9,11 @@ $dbname = getdbName();
 $VIN = $_POST['vin_input'];
 $SID = $_POST['sid_input'];
 $EID = $_POST['eid_input'];
-$commission = $_POST['commission_input'];
+$commission = (int)$_POST['commission_input'];
 $sale_date = $_POST['sale_date_input'];
-$downpayment = $_POST['downpayment_input'];
-$sale_price = $_POST['sale_price_input'];
-$interest_rate = $_POST['i_rate_input'];
+$downpayment = (int)$_POST['downpayment_input'];
+$sale_price = (int)$_POST['sale_price_input'];
+$interest_rate = (int)$_POST['i_rate_input'];
 
 //For Customer
 $first = $_POST["first_input"];
@@ -46,15 +46,19 @@ mysqli_close($con);
 
 
 //Insert new sale
+$servername = getServerName();
+$username = getUserName();
+$password = getPassword();
+$dbname = getdbName();
 $con = new mysqli($servername, $username, $password, $dbname);
 
 if ($con->connect_error) {
 die("Connection failed: " . $con->connect_error);
 }
 
-$sql = "INSERT INTO Sale (_sid, sale_price, intrest_rate, downpayment, commission, sale_date) 
+$sql = "INSERT INTO Sale (_sid, intrest_rate, sale_price, downpayment, commission, sale_date) 
 VALUES 
-(\"$SID\", \"$sale_price\", \"$interest_rate\", \"$downpayment\", \"$commission\", \"$sale_date\")";
+(\"$SID\", \"$interest_rate\", \"$sale_price\", \"$downpayment\", \"$commission\", \"$sale_date\")";
 
 // Check if it worked correctly
 if(mysqli_query($con, $sql)){
@@ -66,6 +70,11 @@ mysqli_close($con);
 
 
 //Insert into Sale_Employee 
+$servername = getServerName();
+$username = getUserName();
+$password = getPassword();
+$dbname = getdbName();
+
 $con = new mysqli($servername, $username, $password, $dbname);
 
 if ($con->connect_error) {
@@ -86,6 +95,11 @@ mysqli_close($con);
 
 
 //Insert into Sale_Vehicle 
+$servername = getServerName();
+$username = getUserName();
+$password = getPassword();
+$dbname = getdbName();
+
 $con = new mysqli($servername, $username, $password, $dbname);
 
 if ($con->connect_error) {
