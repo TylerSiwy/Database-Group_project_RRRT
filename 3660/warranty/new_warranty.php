@@ -1,10 +1,11 @@
 <html>
 	<body>
 	<?php
-	$servername = "localhost";
-	$username = "root";
-	$password = "";
-	$dbname = "Dealership";
+	include '../credentials.php';
+	$servername = getServerName();
+	$username = getUserName();
+	$password = getPassword();
+	$dbname = getdbName();
 
 	// Variables for inserting into Customer table
 	$policy_no = $_POST["policy_number"];

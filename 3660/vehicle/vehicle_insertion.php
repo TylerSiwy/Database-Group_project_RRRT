@@ -1,12 +1,13 @@
 <html>
 	<body>
 	<?php
+	
 	function vehicleInsertion($VIN, $Year, $Model, $Edition, 
 	$Colour_Interior, $Colour_Exterior, $Purchase_Date){
-		$servername = "localhost";
-		$username = "root";
-		$password = "";
-		$dbname = "dealership";
+		$servername = getServerName();
+		$username = getUserName();
+		$password = getPassword();
+		$dbname = getdbName();
 		$con = new mysqli($servername, $username, $password, $dbname);
 
 		if ($con->connect_error) {

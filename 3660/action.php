@@ -2,10 +2,10 @@
 	<body>
 	<?php
 
-	$servername = "localhost";
-	$username = "root";
-	$password = "root";
-	$dbname = "dealership";
+	$servername = getServerName();
+	$username = getUserName();
+	$password = getPassword();
+	$dbname = getdbName();
 
 	$con = new mysqli($servername, $username, $password, $dbname);
 

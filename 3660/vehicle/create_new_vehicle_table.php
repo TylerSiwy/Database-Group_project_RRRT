@@ -1,9 +1,10 @@
 <?php
+
 function create_new_vehicle_table(){
-$servername = "localhost";
-$username = "root";
-$password = "";
-$dbname = "Dealership";
+$servername = getServerName();
+$username = getUserName();
+$password = getPassword();
+$dbname = getdbName();
 
 // Create connection
 $conn = new mysqli($servername, $username, $password, $dbname);
