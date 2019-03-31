@@ -16,10 +16,10 @@ if ($con->connect_error) {
 $sql = "CREATE TABLE Vehicle_Warranty (
     policy_number char(5),
     vin char(17),
+    co_signer varchar(40),
     primary key(policy_number),
     foreign key(policy_number) references Warranty(policy_number),
-    foreign key(vin) references Vehicle(vin))
-";
+    foreign key(vin) references Vehicle(vin));";
 
 if ($con->query($sql) === TRUE) {
     echo "Vehicle_Warranty created successfully"."<br>";

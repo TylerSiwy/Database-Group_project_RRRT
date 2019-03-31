@@ -13,12 +13,12 @@ if ($con->connect_error) {
 } 
 
 // sql to create table
-$sql = "CREATE TABLE   Sale_Employee (
+$sql = "CREATE TABLE Sale_Employee (
     eid char(5),
-    sid char(5),
-    primary key(sid),
+    _sid char(5),
+    primary key(_sid),
     foreign key(eid) references Employee(eid),
-    foreign key(sid) references Sale(sid))
+    foreign key(_sid) references Sale(_sid))
 ";
 
 if ($con->query($sql) === TRUE) {
