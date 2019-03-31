@@ -1,10 +1,7 @@
 
 <?php
 include 'database_initial_setup.php';
-$servername = "localhost";
-$username = "root";
-$password = "";
-$dbname = "Dealership";
+
 ?>
 
 <html>

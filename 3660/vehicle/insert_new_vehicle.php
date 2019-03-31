@@ -1,10 +1,11 @@
 
 <?php
+include "../credentials.php";
 include "vehicle_insertion.php";
-$servername = "localhost";
-$username = "root";
-$password = "";
-$dbname = "dealership";
+$servername = getServerName();
+$username = getUserName();
+$password = getPassword();
+$dbname = getdbName();
 
 $con = new mysqli($servername, $username, $password, $dbname);
 
@@ -31,12 +32,12 @@ $Edition = $_POST["edition_input"];
 $Colour_Interior= $_POST["colour_interior_input"];
 $Colour_Exterior= $_POST["colour_exterior_input"];
 $Purchase_Date = $_POST["purchase-date_input"];
-
+$expected_kms = $_POST["expected_kms_input"];
 
 // Insertion
 $sql="INSERT INTO New_Vehicle
 VALUES
-($VIN, $expected_kms, $msrp)";
+('$VIN', '$expected_kms', '$msrp')";
 
 // Check if it worked correctly
 if(mysqli_query($con, $sql)){

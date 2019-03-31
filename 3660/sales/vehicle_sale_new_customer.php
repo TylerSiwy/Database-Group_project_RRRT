@@ -1,9 +1,9 @@
 
 <?php
-$servername = "localhost";
-$username = "root";
-$password = "";
-$dbname = "dealership";
+$servername = getServerName();
+$username = getUserName();
+$password = getPassword();
+$dbname = getdbName();
 
 //For Sale
 $VIN = $_POST['vin_input'];

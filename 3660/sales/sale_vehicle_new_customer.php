@@ -1,10 +1,10 @@
 
 <?php
 include "vehicle_insertion.php";
-$servername = "localhost";
-$username = "root";
-$password = "";
-$dbname = "dealership";
+$servername = getServerName();
+$username = getUserName();
+$password = getPassword();
+$dbname = getdbName();
 
 $con = new mysqli($servername, $username, $password, $dbname);
 

@@ -14,14 +14,15 @@ include 'sales/create_sale_customer_table.php';
 include 'sales/create_sale_employee_table.php';
 include 'sales/create_sale_vehicle_table.php';
 include 'warranty/create_vehicle_warranty_table.php';
+include 'credentials.php';
 
 
+function database_setup() {
+    $servername = getServerName();
+    $username = getUserName();
+    $password = getPassword();
+    $dbname = getdbName();
 
-function database_setup(){
-    $servername = "localhost";
-    $username = "root";
-    $password = "";
-    $dbname = "Dealership";
     // Create connection
     $con = new mysqli($servername, $username, $password);
     // Check connection
@@ -137,10 +138,11 @@ function database_setup(){
     }
 }
 function insertSQL(string $tableName, string $sql){
-    $servername = "localhost";
-    $username = "root";
-    $password = "";
-    $dbname = "Dealership";
+    $servername = getServerName();
+$username = getUserName();
+$password = getPassword();
+$dbname = getdbName();
+
     $con = new mysqli($servername, $username, $password, $dbname);
 
         if ($con->connect_error) {

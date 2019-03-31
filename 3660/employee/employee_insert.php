@@ -1,10 +1,11 @@
 <html>
 	<body>
 	<?php
-	$servername = "localhost";
-	$username = "root";
-	$password = "";
-	$dbname = "Dealership";
+	include '../credentials.php';
+	$servername = getServerName();
+	$username = getUserName();
+	$password = getPassword();
+	$dbname = getdbName();
 
 	// Variables for inserting into Customer table
 	$EID = $_POST["eid_input"];

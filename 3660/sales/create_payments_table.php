@@ -1,9 +1,9 @@
 <?php
 function create_payments_table(){
-$servername = "localhost";
-$username = "root";
-$password = "";
-$dbname = "Dealership";
+$servername = getServerName();
+$username = getUserName();
+$password = getPassword();
+$dbname = getdbName();
 
 // Create connection
 $con = new mysqli($servername, $username, $password, $dbname);
