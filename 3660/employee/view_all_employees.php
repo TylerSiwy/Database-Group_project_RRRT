@@ -6,31 +6,28 @@
 <body>
 	<a href="View_Employee.html"><button>Back</button></a>
 	<br><br><br>
+	
+	<?php
+	include '../credentials.php';
+	$servername = getServerName();
+	$username = getUserName();
+	$password = getPassword();
+	$dbname = getdbName();
 
-<?php
-include '../credentials.php';
-$servername = getServerName();
-$username = getUserName();
-$password = getPassword();
-$dbname = getdbName();
+	// Insertion into Employee
+	$con = new mysqli($servername, $username, $password, $dbname);
 
-// Variables for inserting into Customer table
-$EID = $_POST["eid_input"];
+	if ($con->connect_error) {
+	die("Connection failed: " . $con->connect_error);
+	}
+	$sql = "SELECT *
+	FROM Employee";
 
-// Insertion into Employee
-$con = new mysqli($servername, $username, $password, $dbname);
-
-if ($con->connect_error) {
-die("Connection failed: " . $con->connect_error);
-}
-$sql = "SELECT *
-FROM Employee
-WHERE eid = '$EID'";
-
-$result = $con->query($sql);
+	$result = $con->query($sql);
 
 
-if ($result->num_rows > 0) 
+	// Output the results in a table format
+	if ($result->num_rows > 0) 
 	{ 
 		echo "<div class='employee_container'>";
 		echo "<div class='item'>";
@@ -62,13 +59,13 @@ if ($result->num_rows > 0)
 		}
 		echo "</div>";
 	} else 
-{
-	echo "0 results";
-}
+	{
+		echo "0 results";
+	}
 
-mysqli_close($con);
+	mysqli_close($con);
 
-?>
+	?>
 
 </body>
 
