@@ -105,9 +105,10 @@ function database_setup() {
         ");
 
         insertSQL("Sale_Customer",
-        "INSERT INTO Sale_Customer VALUES('C-000', 'S-345');
-        INSERT INTO Sale_Customer VALUES('C-002', 'S-117');
-        INSERT INTO Sale_Customer VALUES('C-002', 'S-454');");
+        "INSERT INTO Sale_Customer VALUES('Rylan', 'Bueckert', '7809283127', 'S-345');
+        INSERT INTO Sale_Customer VALUES('Ryan', 'Wenman', '6664206969', 'S-117');
+        INSERT INTO Sale_Customer VALUES('Ryan', 'Wenman', '6664206969', 'S-454');
+        INSERT INTO Sale_Customer VALUES('Ryan', 'Wenman', '6664206969', 'S-420');");
 
 /* relations ******************************************************/
         insertSQL("Sale_Employee","INSERT INTO Sale_Employee VALUES('E-069', 'S-345');
