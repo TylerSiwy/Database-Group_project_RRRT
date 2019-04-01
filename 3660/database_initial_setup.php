@@ -141,7 +141,7 @@ function database_setup() {
         echo "Database not created: " . $con->error."<br>";
     }
 }
-function insertSQL(string $tableName, string $sql){
+function insertSQL($tableName, $sql){
     $servername = getServerName();
 $username = getUserName();
 $password = getPassword();
