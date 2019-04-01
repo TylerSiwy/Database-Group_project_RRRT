@@ -117,4 +117,29 @@ echo "Sale_vehicle inserted successfully.<BR>";
 echo "ERROR: Could not able to execute $sql. " . mysqli_error($con);
 }
 mysqli_close($con);
+
+
+//Insert into Sale_Customer
+$servername = getServerName();
+$username = getUserName();
+$password = getPassword();
+$dbname = getdbName();
+
+$con = new mysqli($servername, $username, $password, $dbname);
+
+if ($con->connect_error) {
+die("Connection failed: " . $con->connect_error);
+}
+
+$sql = "INSERT INTO Sale_Customer (first_name , last_name, phone_number, _sid) 
+VALUES 
+(\"$first\", \"$last\", \"$phone_number\", \"$SID\")";
+
+// Check if it worked correctly
+if(mysqli_query($con, $sql)){
+echo "Sale_Customer inserted successfully.<BR>";
+} else{
+echo "ERROR: Could not able to execute $sql. " . mysqli_error($con);
+}
+mysqli_close($con);
 ?>
