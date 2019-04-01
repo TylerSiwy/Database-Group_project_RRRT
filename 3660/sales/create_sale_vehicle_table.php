@@ -18,7 +18,7 @@ $sql = "CREATE TABLE Sale_Vehicle (
     purchase_date date,
     _sid char(5),
     primary key(_sid),
-    foreign key(vin,purchase_date) references Vehicles(vin, purchase_date),
+    foreign key(vin,purchase_date) references Vehicle(vin, purchase_date),
     foreign key(_sid) references Sale(_sid));
 ";
 
