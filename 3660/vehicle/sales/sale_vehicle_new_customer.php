@@ -1,6 +1,5 @@
 
 <?php
-include "../credentials.php";
 include "vehicle_insertion.php";
 $servername = getServerName();
 $username = getUserName();
@@ -13,7 +12,6 @@ if ($con->connect_error) {
 die("Connection failed: " . $con->connect_error);
 }
 //For Customer Insertion
-$customer_ID = isset($_POST["cid_input"]) ? (int)$_POST["cid_input"]:-1;
 $f_name = isset($_POST["first_input"]) ? (int)$_POST["first_input"]:-1;
 $l_name = isset($_POST["last_input"]) ? (int)$_POST["last_input"]:-1;
 $DOB = isset($_POST["dob_input"]) ? (int)$_POST["dob_input"]:-1;
@@ -32,12 +30,6 @@ $Edition = $_POST["edition_input"];
 $Colour_Interior= $_POST["colour_interior_input"];
 $Colour_Exterior= $_POST["colour_exterior_input"];
 $Purchase_Date = $_POST["purchase-date_input"];
-$expected_kms = $_POST["expected_kms_input"];
-
-// Insertion
-$sql="INSERT INTO New_Vehicle
-VALUES
-('$VIN', '$expected_kms', '$msrp')";
 
 // Check if it worked correctly
 if(mysqli_query($con, $sql)){

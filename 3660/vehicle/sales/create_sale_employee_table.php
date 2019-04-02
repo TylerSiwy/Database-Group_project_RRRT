@@ -1,5 +1,5 @@
 <?php
-function create_items_covered_table(){
+function create_sale_employee_table(){
 $servername = getServerName();
 $username = getUserName();
 $password = getPassword();
@@ -13,15 +13,16 @@ if ($con->connect_error) {
 } 
 
 // sql to create table
-$sql = "CREATE TABLE items_covered (
-    policy_number char(5),
-    item  varchar(20),
-    primary key(policy_number,item),
-    foreign key(policy_number) references Warranty(policy_number))
+$sql = "CREATE TABLE Sale_Employee (
+    eid char(5),
+    _sid char(5),
+    primary key(_sid),
+    foreign key(eid) references Employee(eid),
+    foreign key(_sid) references Sale(_sid))
 ";
 
 if ($con->query($sql) === TRUE) {
-    echo "items_covered created successfully"."<br>";
+    echo "Sale Employee Table created successfully"."<br>";
 } else {
     echo "Error creating table: " . $con->error."<br>";
 }

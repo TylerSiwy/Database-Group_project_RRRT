@@ -1,10 +1,9 @@
 <?php
-function create_repair_table(){
+function create_sale_table(){
 $servername = getServerName();
 $username = getUserName();
 $password = getPassword();
 $dbname = getdbName();
-
 
 // Create connection
 $conn = new mysqli($servername, $username, $password, $dbname);
@@ -14,17 +13,18 @@ if ($conn->connect_error) {
 } 
 
 // sql to create table
-$sql = "CREATE TABLE  Repairs (
-    vin char(17),
-    problem varchar(100), /*description ex: flat tire*/
-    cost_estimate numeric(9,2),
-    cost_actual numeric(9,2),
-    primary key(vin,problem),
-    foreign key(vin) references Used_Vehicle(vin))
+$sql = "CREATE TABLE Sale (
+    _sid char(5),
+    intrest_rate numeric(4,2),
+    sale_price numeric(9,2),
+    downpayment numeric(9,2),
+    commission numeric(9,2),
+    sale_date date,  /*date datatype*/
+    primary key(_sid))
 ";
 
 if ($conn->query($sql) === TRUE) {
-    echo " Repair table created successfully"."<br>";
+    echo "Sale Table created successfully"."<br>";
 } else {
     echo "Error creating table: " . $conn->error."<br>";
 }

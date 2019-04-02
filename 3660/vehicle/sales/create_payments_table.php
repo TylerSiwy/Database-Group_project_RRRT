@@ -1,5 +1,5 @@
 <?php
-function create_items_covered_table(){
+function create_payments_table(){
 $servername = getServerName();
 $username = getUserName();
 $password = getPassword();
@@ -13,15 +13,19 @@ if ($con->connect_error) {
 } 
 
 // sql to create table
-$sql = "CREATE TABLE items_covered (
-    policy_number char(5),
-    item  varchar(20),
-    primary key(policy_number,item),
-    foreign key(policy_number) references Warranty(policy_number))
+$sql = "CREATE TABLE  Payments (
+    _sid char(5),
+    payment_number char(5),
+    paid_date date, /*date datatype*/
+    due_date int, /*day of the month*/
+    amount int,
+    bank_account int,
+    primary key(_sid, payment_number),
+    foreign key(_sid) references Sale(_sid))
 ";
 
 if ($con->query($sql) === TRUE) {
-    echo "items_covered created successfully"."<br>";
+    echo "Payments Table created successfully"."<br>";
 } else {
     echo "Error creating table: " . $con->error."<br>";
 }
