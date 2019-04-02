@@ -15,9 +15,9 @@
 		}
 
 		// Insertion
-		$sql="INSERT INTO Vehicle (vin, year, model, _edition, interior_color, exterior_color, purchase_date)
+		$sql = "INSERT INTO Vehicle (vin, _year, model, _edition, interior_color, exterior_color, purchase_date)
 		VALUES
-		($VIN, $Year, \"$Model\", \"$Edition\", \"$Colour_Interior\", \"$Colour_Exterior\", \"$Purchase_Date\")";
+		(\"$VIN\", \"$Year\", \"$Model\", \"$Edition\", \"$Colour_Interior\", \"$Colour_Exterior\", \"$Purchase_Date\")";
 		// Check if it worked correctly
 		if(mysqli_query($con, $sql)){
 		echo "Records inserted successfully.";

@@ -62,7 +62,8 @@ function database_setup() {
         INSERT INTO Vehicle VALUES('9ZGBH41JXMN109185','2000','corolla','XE','yellow','purple','2010-04-30');
         INSERT INTO Vehicle VALUES('2BGBH41JXMN109185','2019','rav4','BE','yellow','purple','2019-04-30');
         INSERT INTO Vehicle VALUES('3B22H41JXMN109185','2019','rav4','BE','yellow','purple','2019-02-20');
-        INSERT INTO Vehicle VALUES('G5GHSS3K5DBF4HD5H','2006','camry','LE','pink','lime','2018-09-08');");
+        INSERT INTO Vehicle VALUES('G5GHSS3K5DBF4HD5H','2006','camry','LE','pink','lime','2018-09-08');
+        INSERT INTO Vehicle VALUES('TYLERSUCKSBIGPP69', '2069', 'corolla', 'BE', 'black', 'black', '2019-04-01');");
 
         insertSQL("New_Vehicle", 
         "INSERT INTO New_Vehicle VALUES('2BGBH41JXMN109185','2019-04-30',10,2000.00);

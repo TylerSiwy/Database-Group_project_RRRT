@@ -106,10 +106,42 @@ body {
     color: #000;
 }
 
-.warranty_container
+.customer_container
+{
+    display: grid;
+    grid-template-columns: repeat(9, 10vw);
+    background-color: #ccc;
+    color: #000;
+}
+
+.four_wide_container
 {
     display: grid;
     grid-template-columns: repeat(4, 25vw);
+    background-color: #ccc;
+    color: #000;
+}
+
+.sales_container
+{
+    display: grid;
+    grid-template-columns: repeat(8, 12.5vw);
+    background-color: #ccc;
+    color: #000;
+}
+
+.profits_container
+{
+    display: grid;
+    grid-template-columns: repeat(6, 16.6vw);
+    background-color: #ccc;
+    color: #000;
+}
+
+.three_wide_container
+{
+    display: grid;
+    grid-template-columns: repeat(3, 33.3vw);
     background-color: #ccc;
     color: #000;
 }

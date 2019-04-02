@@ -14,12 +14,9 @@ if ($con->connect_error) {
 
 // sql to create table
 $sql = "CREATE TABLE Warranty (
-    policy_number char(5),
+    pid char(5),
     warranty_length int, /*months*/
-    deductible numeric(9,2),
-    price numeric(9,2),
-    primary key(policy_number));
-";
+    primary key(pid));";
 
 if ($con->query($sql) === TRUE) {
     echo "Warranty created successfully"."<br>";

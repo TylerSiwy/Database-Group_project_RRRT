@@ -33,15 +33,16 @@ $Colour_Interior= $_POST["colour_interior_input"];
 $Colour_Exterior= $_POST["colour_exterior_input"];
 $Purchase_Date = $_POST["purchase-date_input"];
 $expected_kms = $_POST["expected_kms_input"];
+$msrp = $_POST["msrp_input"];
 
 // Insertion
 $sql="INSERT INTO New_Vehicle
 VALUES
-('$VIN', '$expected_kms', '$msrp')";
+('$VIN', '$Purchase_Date', '$expected_kms', '$msrp')";
 
 // Check if it worked correctly
 if(mysqli_query($con, $sql)){
-echo "Records inserted successfully.<BR>";
+echo "Records  inserted successfully.<BR>";
 } else{
 echo "ERROR: Could not able to execute $sql. " . mysqli_error($con);
 }
@@ -50,6 +51,6 @@ mysqli_close($con);
 
 //Insert into Vehicle as well
 vehicleInsertion($VIN, $Year, $Model, $Edition,
-	 $Colour_Exterior, $Colour_Interior, $Purchase_Date);
+	$Colour_Interior, $Colour_Exterior, $Purchase_Date);
 
 ?>

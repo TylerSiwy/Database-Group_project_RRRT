@@ -14,12 +14,14 @@ if ($con->connect_error) {
 
 // sql to create table
 $sql = "CREATE TABLE Vehicle_Warranty (
-    policy_number char(5),
-    vin char(17),
+    pid char(5),
+    _sid char(5),
+    deductible numeric(9,2),
+    price numeric(9,2),
     co_signer varchar(40),
-    primary key(policy_number),
-    foreign key(policy_number) references Warranty(policy_number),
-    foreign key(vin) references Vehicle(vin));";
+    primary key(pid),
+    foreign key(pid) references Warranty(pid),
+    foreign key(_sid) references Sale(_sid));";
 
 if ($con->query($sql) === TRUE) {
     echo "Vehicle_Warranty created successfully"."<br>";
