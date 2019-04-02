@@ -4,7 +4,7 @@
 </head>
 
 <body>
-	<a href="View_Warranty.html"><button>Back</button></a>
+	<a href="View_Repairs.html"><button>Back</button></a>
 	<br><br><br>
 	
 	<?php
@@ -14,9 +14,6 @@
 	$password = getPassword();
 	$dbname = getdbName();
 
-	// Variables for inserting into Customer table
-	$EID = $_POST["eid_input"];
-
 	// Insertion into Employee
 	$con = new mysqli($servername, $username, $password, $dbname);
 
@@ -24,47 +21,46 @@
 	die("Connection failed: " . $con->connect_error);
 	}
 	$sql = "SELECT *
-	FROM Warranty
-	WHERE policy_number = '$EID'";
+	FROM Repairs";
 
 	$result = $con->query($sql);
 
 	// Output the results in a table format
 	if ($result->num_rows > 0) 
 	{ 
-		echo "<div class='warranty_container'>";
-		echo "<div class='item'>";
-		echo "Policy Number";
-		echo "</div>";
+		echo "<div class='repair_container'>";
 		echo "<div class='item'>";
 		echo "VIN";
 		echo "</div>";
 		echo "<div class='item'>";
-		echo "Deductable";
+		echo "Problem";
 		echo "</div>";
 		echo "<div class='item'>";
-		echo "Price";
+		echo "Cost Estimate";
+		echo "</div>";
+		echo "<div class='item'>";
+		echo "Cost Actual";
 		echo "</div>";
 		echo "</div></br>";
 
-		echo "<div class='warranty_container'>";
+		echo "<div class='repair_container'>";
 		// output data of each row
 		while($row = $result->fetch_assoc()) 
 		{
 			echo "<div class='item'>";
-			echo $row["policy_number"]." ";
+			echo $row["vin"]." ";
 			echo "</div>";
 
 			echo "<div class='item'>";
-			echo $row["warranty_length"]." ";
+			echo $row["problem"]." ";
 			echo "</div>";
 
 			echo "<div class='item'>";
-			echo $row["deductible"]." ";
+			echo $row["cost_estimate"]." ";
 			echo "</div>";
 
 			echo "<div class='item'>";
-			echo $row["price"]." ";
+			echo $row["cost_actual"]." ";
 			echo "</div>";
 		}
 		echo "</div>";

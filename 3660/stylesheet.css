@@ -90,10 +90,26 @@ body {
     font-size: 30px;
 }
 
+.repair_container
+{
+    display: grid;
+    grid-template-columns: repeat(4, 25vw);
+    background-color: #ccc;
+    color: #000;
+}
+
 .employee_container
 {
     display: grid;
     grid-template-columns: repeat(3, 33vw);
+    background-color: #ccc;
+    color: #000;
+}
+
+.warranty_container
+{
+    display: grid;
+    grid-template-columns: repeat(4, 25vw);
     background-color: #ccc;
     color: #000;
 }

@@ -35,8 +35,12 @@ include 'database_initial_setup.php';
         <li><a href="#">Warranties</a>
         <ul class="second-level-menu">
             <li><a href="warranty/View_Warranty.html">View Warranties</a></li>
-            <li><a href="vehicle/Vehicle_Repair.html">Add A Repair Ticket</a></li>
             <li><a href="warranty/New_Warranty.html">Add A Warranty</a></li>
+        </ul>
+        <li><a href="#">Repairs</a>
+        <ul class="second-level-menu">
+            <li><a href="vehicle/View_Repairs.html">View Repairs</a></li>
+            <li><a href="vehicle/Vehicle_Repair.html">Add A Repair Ticket</a></li>
         </ul>
     </ul>
 
