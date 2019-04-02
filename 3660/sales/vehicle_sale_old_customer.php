@@ -39,6 +39,44 @@ echo "ERROR: Could not able to execute $sql. " . mysqli_error($con);
 }
 mysqli_close($con);
 
-//Delete vehicle using VIN
+
+//Insert into Sale_Employee 
+$con = new mysqli($servername, $username, $password, $dbname);
+
+if ($con->connect_error) {
+die("Connection failed: " . $con->connect_error);
+}
+
+$sql = "INSERT INTO Sale_Employee (eid, _sid) 
+VALUES 
+(\"$EID\", \"$SID\")";
+
+// Check if it worked correctly
+if(mysqli_query($con, $sql)){
+echo "Sale_employee inserted successfully.<BR>";
+} else{
+echo "ERROR: Could not able to execute $sql. " . mysqli_error($con);
+}
+mysqli_close($con);
+
+
+//Insert into Sale_Vehicle 
+$con = new mysqli($servername, $username, $password, $dbname);
+
+if ($con->connect_error) {
+die("Connection failed: " . $con->connect_error);
+}
+
+$sql = "INSERT INTO Sale_Vehicle (vin, _sid) 
+VALUES 
+(\"$VIN\", \"$SID\")";
+
+// Check if it worked correctly
+if(mysqli_query($con, $sql)){
+echo "Sale_vehicle inserted successfully.<BR>";
+} else{
+echo "ERROR: Could not able to execute $sql. " . mysqli_error($con);
+}
+mysqli_close($con);
 
 ?>

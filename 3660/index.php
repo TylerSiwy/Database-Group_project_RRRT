@@ -32,12 +32,8 @@ include 'database_initial_setup.php';
             <li><a href="employee/View_Employee.html">View Employee</a></li>
             <li><a href="employee/New_Employee.html">New Employee</a></li>
         </ul>
-        <li><a href="#">Warranties</a>
-        <ul class="second-level-menu">
-            <li><a href="warranty/View_Warranty.html">View Warranties</a></li>
-            <li><a href="vehicle/Vehicle_Repair.html">Add A Repair Ticket</a></li>
-            <li><a href="warranty/New_Warranty.html">Add A Warranty</a></li>
-        </ul>
+        <li><a href="vehicle/Vehicle_Repair.html">Add A Repair Ticket</a></li>
+        <li><a href="warranty/New_Warranty.html">Add A Warranty</a></li>
     </ul>
 
     <br><br><br>

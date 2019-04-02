@@ -31,9 +31,9 @@
 	$Purchase_Date = $_POST["purchase-date_input"];
 
 	// Insertion
-	$sql="INSERT INTO used_vehicle (vin, current_kilometers, bought_from, purchase_location, price_paid, book_price)
+	$sql="INSERT INTO used_vehicle (vin, purchase_date, current_km, bought_from, purchase_location, price_paid, book_price)
 	VALUES
-	($VIN, \"$current_kms\", \"$bought_from\", \"$purchase_location\", \"$price_paid\", \"$book_price\")";
+	($VIN, \"$Purchase_Date\", \"$current_kms\", \"$bought_from\", \"$purchase_location\", \"$price_paid\", \"$book_price\")";
 
 	// Check if it worked correctly
 	if(mysqli_query($con, $sql)){

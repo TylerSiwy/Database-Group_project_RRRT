@@ -16,11 +16,11 @@ if ($conn->connect_error) {
 // sql to create table
 $sql = "CREATE TABLE New_Vehicle (
     vin char(17),
+    purchase_date date,
     expected_km int,
     msrp numeric(9,2),
     primary key(vin),
-    foreign key(vin) references Vehicle(vin))
-";
+    foreign key(vin, purchase_date) references Vehicle(vin, purchase_date));";
 
 if ($conn->query($sql) === TRUE) {
     echo "Vehicle Table created successfully"."<br>";
