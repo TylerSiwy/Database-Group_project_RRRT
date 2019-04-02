@@ -1,5 +1,5 @@
 <?php
-function create_vehicle_warranty_table(){
+function create_sale_warranty_table(){
 $servername = getServerName();
 $username = getUserName();
 $password = getPassword();
@@ -13,7 +13,7 @@ if ($con->connect_error) {
 } 
 
 // sql to create table
-$sql = "CREATE TABLE Vehicle_Warranty (
+$sql = "CREATE TABLE Sale_Warranty (
     pid char(5),
     _sid char(5),
     deductible numeric(9,2),
@@ -24,7 +24,7 @@ $sql = "CREATE TABLE Vehicle_Warranty (
     foreign key(_sid) references Sale(_sid));";
 
 if ($con->query($sql) === TRUE) {
-    echo "Vehicle_Warranty created successfully"."<br>";
+    echo "Sale_Warranty created successfully"."<br>";
 } else {
     echo "Error creating table: " . $con->error."<br>";
 }
