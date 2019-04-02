@@ -15,7 +15,7 @@
 	$dbname = getdbName();
 
 	// Variables for inserting into Customer table
-	$EID = $_POST["eid_input"];
+	$EID = $_POST["input"];
 
 	// Insertion into Employee
 	$con = new mysqli($servername, $username, $password, $dbname);

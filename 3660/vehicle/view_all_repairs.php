@@ -14,9 +14,6 @@
 	$password = getPassword();
 	$dbname = getdbName();
 
-	// Variables for inserting into Customer table
-	$EID = $_POST["eid_input"];
-
 	// Insertion into Employee
 	$con = new mysqli($servername, $username, $password, $dbname);
 
@@ -24,8 +21,7 @@
 	die("Connection failed: " . $con->connect_error);
 	}
 	$sql = "SELECT *
-	FROM Repairs
-	WHERE vin = '$EID'";
+	FROM Repairs";
 
 	$result = $con->query($sql);
 
