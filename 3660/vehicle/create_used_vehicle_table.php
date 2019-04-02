@@ -25,7 +25,7 @@ $sql = "CREATE TABLE Used_Vehicle (
     foreign key(vin, purchase_date) references Vehicle(vin, purchase_date));";
 
 if ($conn->query($sql) === TRUE) {
-    echo "Vehicle Table created successfully"."<br>";
+    echo "Used_Vehicle Table created successfully"."<br>";
 } else {
     echo "Error creating table: " . $conn->error."<br>";
 }
