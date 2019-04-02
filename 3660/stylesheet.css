@@ -98,6 +98,14 @@ body {
     color: #000;
 }
 
+.customer_container
+{
+    display: grid;
+    grid-template-columns: repeat(9, 10vw);
+    background-color: #ccc;
+    color: #000;
+}
+
 .item 
 {
     background-color: #444;

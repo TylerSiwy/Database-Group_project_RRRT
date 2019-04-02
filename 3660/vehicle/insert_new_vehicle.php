@@ -42,7 +42,7 @@ VALUES
 
 // Check if it worked correctly
 if(mysqli_query($con, $sql)){
-echo "Records inserted successfully.<BR>";
+echo "Records  inserted successfully.<BR>";
 } else{
 echo "ERROR: Could not able to execute $sql. " . mysqli_error($con);
 }
