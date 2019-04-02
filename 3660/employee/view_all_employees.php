@@ -25,7 +25,6 @@
 
 	$result = $con->query($sql);
 
-
 	// Output the results in a table format
 	if ($result->num_rows > 0) 
 	{ 
