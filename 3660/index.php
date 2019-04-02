@@ -16,33 +16,44 @@ include 'database_initial_setup.php';
     <ul class="top-level-menu">
         <li><a href="index.php">Home</a></li>
 
-        <li><a href="#">Sell A Vehicle</a>
+        <li><a href="#">Sales</a>
         <ul class="second-level-menu">
-            <li><a href="sales/Vehicle_Sale_New_Customer.html">New Customer</a></li>
-            <li><a href="sales/Vehicle_Sale_Old_Customer.html">Existing Customer</a></li>
+            <li><a href="sales/Vehicle_Sale_New_Customer.html">Sell To New Custom</a></li>
+            <li><a href="sales/Vehicle_Sale_Old_Customer.html">Sell To Old Custom</a></li>
+            <li><a href="sales/all_sales.php">All Sales</a></li>
+            <li><a href="sales/profits.php">Profits</a></li>
         </ul>
 
-        <li><a href="#">Buy A Vehicle</a>
+        <li><a href="#">Vehicles</a>
         <ul class="second-level-menu">
-            <li><a href="vehicle/New_Vehicle.html">New Vehicle</a></li>
-            <li><a href="vehicle/Used_Vehicle.html">Used Vehicle</a></li>
+            <li><a href="vehicle/New_Vehicle.html">Buy New Vehicle</a></li>
+            <li><a href="vehicle/Used_Vehicle.html">Buy Used Vehicle</a></li>
+            <li><a href="vehicle/all_vehicles_in_stock.php">Vehicle Stocks</a></li>
         </ul>    
 
         <li><a href="vehicle/Vehicle_Repair.html">Add A Repair Ticket</a></li>
-        <li><a href="warranty/New_Warranty.html">Add A Warranty</a></li>
         
+        <li><a href="#">Warranty</a>
+        <ul class="second-level-menu">
+            <li><a href="warranty/New_Warranty.html">Add A Warranty</a></li>
+            <li><a href="warranty/all_warranties.php">All Sold Warranties</a></li>
+        </ul>
+
         <li><a href="#">Customer</a>
         <ul class="second-level-menu">
             <li><a href="customer/New_Customer.html">New Customer</a></li>
             <li><a href="customer/View_Customer.html">View A Customer</a></li>
+            <li><a href="customer/View_Customer.html">All Late Payments</a></li>
             <li><a href="customer/Update_Customer.html">Update</a></li>
             <li><a href="customer/Delete_Customer.html">Delete</a></li>
+            <li><a href="customer/Delete_Customer.html">Add Employ History</a></li>
         </ul>
 
         <li><a href="#">Employee</a>
         <ul class="second-level-menu">
             <li><a href="employee/View_Employee.html">View Employee</a></li>
             <li><a href="employee/New_Employee.html">New Employee</a></li>
+            <li><a href="employee/employee_commission.php">Commission</a></li>
         </ul>
     </ul>
 
