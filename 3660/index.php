@@ -30,8 +30,6 @@ include 'database_initial_setup.php';
             <li><a href="vehicle/Used_Vehicle.html">Buy Used Vehicle</a></li>
             <li><a href="vehicle/all_vehicles_in_stock.php">Vehicle Stocks</a></li>
         </ul>    
-
-        <li><a href="vehicle/Vehicle_Repair.html">Add A Repair Ticket</a></li>
         
         <li><a href="#">Warranty</a>
         <ul class="second-level-menu">
@@ -74,6 +72,3 @@ include 'database_initial_setup.php';
 //Checks for, then creates database, tables, and populates with data
 database_setup(); 
 ?>
-   <a href="/3660/customer/Customer.html"><button class="button"> Customer (Not Used)</button></a>
-	<a href="/3660/vehicle/New_Vehicle.html"><button class="button">Add Vehicle (Not Used)</button></a>
-	<a href="test_query.php"><button class="button">Test Query 1 (Not Used)</button></a>

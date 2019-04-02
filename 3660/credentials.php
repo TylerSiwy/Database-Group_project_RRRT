@@ -6,7 +6,7 @@ function getUserName(){
 	return $username = "root";
 }
 function getPassword(){
-	return $password = "root";
+	return $password = "";
 }
 function getdbName(){
 	return $dbname = "Dealership";
