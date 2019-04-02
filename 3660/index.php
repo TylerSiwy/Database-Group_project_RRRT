@@ -36,7 +36,7 @@ include 'database_initial_setup.php';
             <li><a href="customer/New_Customer.html">New Customer</a></li>
             <li><a href="customer/View_Customer.html">View A Customer</a></li>
             <li><a href="customer/Update_Customer.html">Update</a></li>
-            <li><a href="#">Delete</a></li>
+            <li><a href="customer/Delete_Customer.html">Delete</a></li>
         </ul>
 
         <li><a href="#">Employee</a>
