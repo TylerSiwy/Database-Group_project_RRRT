@@ -20,6 +20,8 @@ $first = $_POST["first_input"];
 $last = $_POST["last_input"];
 $phone_number = $_POST["phone_input"];
 
+//Employee EID
+$EID = $_POST['eid_input'];
 
 //Insert new sale
 $con = new mysqli($servername, $username, $password, $dbname);

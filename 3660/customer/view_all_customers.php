@@ -4,7 +4,7 @@
 </head>
 
 <body>
-	<a href=../../index.php"><button>Back</button></a>
+	<a href=../index.php"><button>Back</button></a>
 	<br><br><br>
 
 <?php
