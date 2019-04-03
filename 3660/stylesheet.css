@@ -122,13 +122,6 @@ body {
     color: #000;
 }
 
-.sales_container
-{
-    display: grid;
-    grid-template-columns: repeat(8, 12.5vw);
-    background-color: #ccc;
-    color: #000;
-}
 
 .profits_container
 {

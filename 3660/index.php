@@ -45,6 +45,7 @@ include 'database_initial_setup.php';
         <ul class="second-level-menu">
             <li><a href="employee/View_Employee.html">View Employee</a></li>
             <li><a href="employee/New_Employee.html">New Employee</a></li>
+            <li><a href="employee/employee_commission.php">Commission Totals</a></li>
         </ul>
         <li><a href="#">Warranty</a>
         <ul class="second-level-menu">
