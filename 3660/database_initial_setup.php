@@ -63,7 +63,7 @@ function database_setup() {
         INSERT INTO Vehicle VALUES('2BGBH41JXMN109185','2019','rav4','BE','yellow','purple','2019-04-30');
         INSERT INTO Vehicle VALUES('3B22H41JXMN109185','2019','rav4','BE','yellow','purple','2019-02-20');
         INSERT INTO Vehicle VALUES('G5GHSS3K5DBF4HD5H','2006','camry','LE','pink','lime','2018-09-08');
-        INSERT INTO Vehicle VALUES('TYLERSUCKSBIGPP69', '2069', 'corolla', 'BE', 'black', 'black', '2019-04-01');");
+        INSERT INTO Vehicle VALUES('99999999999999999', '2069', 'corolla', 'BE', 'black', 'black', '2019-04-01');");
 
         insertSQL("New_Vehicle", 
         "INSERT INTO New_Vehicle VALUES('2BGBH41JXMN109185','2019-04-30',10,2000.00);
@@ -72,7 +72,8 @@ function database_setup() {
         insertSQL("Used_Vehicle", 
         "INSERT INTO Used_Vehicle VALUES('1HGBH41JXMN109186', '2019-10-20', 200,'steven','person', 2500.00,1500.00);
         INSERT INTO Used_Vehicle VALUES('9ZGBH41JXMN109185','2010-04-30',200,'toyota motor','toyota motor',2000.00,2500.00);
-        INSERT INTO Used_Vehicle VALUES('G5GHSS3K5DBF4HD5H','2018-09-08',150000,'Ryan Wenman','Ryans house',1600.00, 2000.00);");
+        INSERT INTO Used_Vehicle VALUES('G5GHSS3K5DBF4HD5H','2018-09-08',150000,'Ryan Wenman','Ryans house',1600.00, 2000.00);
+		INSERT INTO Used_Vehicle VALUES('99999999999999999', '2019-04-01', 420666, 'John Zhang', 'UofL', 578645, 600000);");
 
         insertSQL("Sale", 
         "INSERT INTO Sale VALUES('S-345', 1.2, 10000.00, 10.00, 10.00, '2018-03-01');    

@@ -22,6 +22,7 @@ include 'database_initial_setup.php';
             <li><a href="sales/Vehicle_Sale_Old_Customer.html">Sell To Old Custom</a></li>
             <li><a href="sales/all_sales.php">All Sales</a></li>
             <li><a href="sales/profits.php">Profits</a></li>
+            <li><a href="sales/best_sale.php">Best Sale</a></li>
         </ul>
 
         <li><a href="#">Vehicles</a>
@@ -35,11 +36,12 @@ include 'database_initial_setup.php';
         <ul class="second-level-menu">
             <li><a href="customer/New_Customer.html">New Customer</a></li>
             <li><a href="customer/View_Customer.html">View A Customer</a></li>
-            <li><a href="customer/View_Customer.html">All Late Payments</a></li>
+            <li><a href="customer/all_late_payments.php">All Late Payments</a></li>
             <li><a href="customer/Update_Customer.html">Update</a></li>
             <li><a href="customer/Delete_Customer.html">Delete</a></li>
             <li><a href="customer/Delete_Customer.html">Add Employ History</a></li>
             <li><a href="customer/customer_balances.php">Customer Balances</a></li>
+            <li><a href="#">Add Employ History</a></li>
         </ul>
 
         <li><a href="#">Employee</a>
