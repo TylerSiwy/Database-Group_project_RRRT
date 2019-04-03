@@ -21,7 +21,7 @@
 	die("Connection failed: " . $con->connect_error);
 	}
 	$sql = "SELECT *
-	FROM Repairs";
+	FROM Repairs ORDER BY vin, purchase_date asc";
 
 	$result = $con->query($sql);
 
@@ -29,18 +29,31 @@
 	if ($result->num_rows > 0) 
 	{ 
 		echo "<div class='repair_container'>";
+
 		echo "<div class='item'>";
 		echo "VIN";
 		echo "</div>";
+
+		echo "<div class='item'>";
+		echo "Purchase Date";
+		echo "</div>";
+
+		echo "<div class='item'>";
+		echo "Repair Number";
+		echo "</div>";
+
 		echo "<div class='item'>";
 		echo "Problem";
 		echo "</div>";
+
 		echo "<div class='item'>";
 		echo "Cost Estimate";
 		echo "</div>";
+
 		echo "<div class='item'>";
 		echo "Cost Actual";
 		echo "</div>";
+
 		echo "</div></br>";
 
 		echo "<div class='repair_container'>";
@@ -49,6 +62,14 @@
 		{
 			echo "<div class='item'>";
 			echo $row["vin"]." ";
+			echo "</div>";
+
+			echo "<div class='item'>";
+			echo $row["purchase_date"]." ";
+			echo "</div>";
+
+			echo "<div class='item'>";
+			echo $row["repair_number"]." ";
 			echo "</div>";
 
 			echo "<div class='item'>";
