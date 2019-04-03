@@ -127,9 +127,9 @@ function database_setup() {
         INSERT INTO Sale_Vehicle VALUES('G5GHSS3K5DBF4HD5H', '2018-09-08', 'S-420');
         ");
 
-        insertSQL("Repairs","INSERT INTO Repairs VALUES('9ZGBH41JXMN109185', '2010-04-30', 'flat rear left tire', 100, 98.76);
-        INSERT INTO Repairs VALUES('1HGBH41JXMN109186', '2019-10-20', 'flat rear left tire', 100, 98.76);
-        INSERT INTO Repairs VALUES('1HGBH41JXMN109186', '2019-10-20', 'worn brake', 250, 286.21);");
+        insertSQL("Repairs","INSERT INTO Repairs VALUES('9ZGBH41JXMN109185', '2010-04-30', 'R-000', 'flat rear left tire', 100, 98.76);
+INSERT INTO Repairs VALUES('1HGBH41JXMN109186', '2019-10-20', 'R-000', 'flat rear left tire', 100, 98.76);
+INSERT INTO Repairs VALUES('1HGBH41JXMN109186', '2019-10-20', 'R-001', 'worn brake', 250, 286.21);");
 
         insertSQL("Payments","INSERT INTO Payments VALUES('S-345','n-123','2019-10-10',15,2000,723854345);
         INSERT INTO Payments VALUES('S-345','n-223','2019-11-11',15,2000,723854345);

@@ -93,7 +93,7 @@ body {
 .repair_container
 {
     display: grid;
-    grid-template-columns: repeat(4, 25vw);
+    grid-template-columns: repeat(6, 16.6vw);
     background-color: #ccc;
     color: #000;
 }
