@@ -12,7 +12,7 @@
 	$first = $_POST["first_input"];
     $last = $_POST["last_input"];
 	$phone_number = $_POST["phone_input"];
-     /////////////////////////   
+        
         $con = new mysqli($servername, $username, $password, $dbname);
         if ($con->connect_error) {
              die("Connection failed: " . $con->connect_error);
@@ -36,8 +36,7 @@
         }
         else{
             $EID = "E-".$temp;}
-        
-     ///////////////////////////////////   
+           
         
 	// Insertion into Employee
 	$con = new mysqli($servername, $username, $password, $dbname);
