@@ -30,12 +30,6 @@ include 'database_initial_setup.php';
             <li><a href="vehicle/Used_Vehicle.html">Buy Used Vehicle</a></li>
             <li><a href="vehicle/all_vehicles_in_stock.php">Vehicle Stocks</a></li>
         </ul>    
-        
-        <li><a href="#">Warranty</a>
-        <ul class="second-level-menu">
-            <li><a href="warranty/New_Warranty.html">Add A Warranty</a></li>
-            <li><a href="warranty/all_warranties.php">All Sold Warranties</a></li>
-        </ul>
 
         <li><a href="#">Customer</a>
         <ul class="second-level-menu">
@@ -52,10 +46,11 @@ include 'database_initial_setup.php';
             <li><a href="employee/View_Employee.html">View Employee</a></li>
             <li><a href="employee/New_Employee.html">New Employee</a></li>
         </ul>
-        <li><a href="#">Warranties</a>
+        <li><a href="#">Warranty</a>
         <ul class="second-level-menu">
             <li><a href="warranty/View_Warranty.html">View Warranties</a></li>
             <li><a href="warranty/New_Warranty.html">Add A Warranty</a></li>
+            <li><a href="warranty/all_warranties.php">All Sold Warranties</a></li>
         </ul>
         <li><a href="#">Repairs</a>
         <ul class="second-level-menu">

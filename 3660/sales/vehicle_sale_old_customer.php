@@ -20,6 +20,9 @@ $first = $_POST["first_input"];
 $last = $_POST["last_input"];
 $phone_number = $_POST["phone_input"];
 
+//Employee EID
+$EID = $_POST['eid_input'];
+
 //Insert new sale
 $con = new mysqli($servername, $username, $password, $dbname);
 
@@ -27,7 +30,7 @@ if ($con->connect_error) {
 die("Connection failed: " . $con->connect_error);
 }
 
-$sql = "INSERT INTO Sale (sid, sale_price, intrest_rate, downpayment, commission, sale_date) 
+$sql = "INSERT INTO Sale (_sid, sale_price, intrest_rate, downpayment, commission, sale_date) 
 VALUES 
 ('$SID', '$sale_price', '$interest_rate', '$downpayment', '$commission', '$sale_date')";
 
