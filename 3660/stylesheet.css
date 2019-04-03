@@ -122,8 +122,15 @@ body {
     color: #000;
 }
 
+.three_wide_container
+{
+    display: grid;
+    grid-template-columns: repeat(3, 33.3vw);
+    background-color: #ccc;
+    color: #000;
+}
 
-.profits_container
+.six_wide_container
 {
     display: grid;
     grid-template-columns: repeat(6, 16.6vw);
@@ -131,10 +138,18 @@ body {
     color: #000;
 }
 
-.three_wide_container
+.seven_wide_container
 {
     display: grid;
-    grid-template-columns: repeat(3, 33.3vw);
+    grid-template-columns: repeat(7, 14.27vw);
+    background-color: #ccc;
+    color: #000;
+}
+
+.nine_wide_container
+{
+    display: grid;
+    grid-template-columns: repeat(9, 11.1vw);
     background-color: #ccc;
     color: #000;
 }
