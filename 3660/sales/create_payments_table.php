@@ -17,7 +17,7 @@ $sql = "CREATE TABLE  Payments (
     _sid char(5),
     payment_number char(5),
     paid_date date, /*date datatype*/
-    due_date int, /*day of the month*/
+    due_date date,
     amount int,
     bank_account int,
     primary key(_sid, payment_number),
