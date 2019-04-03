@@ -19,7 +19,7 @@ $sql = "CREATE TABLE Sale_Customer (
     phone_number varchar(10),
     _sid char(5),
     primary key(_sid),
-    foreign key(first_name, last_name) references Customer(first_name, last_name),
+    foreign key(first_name, last_name,phone_number) references Customer(first_name, last_name,phone_number),
     foreign key(_sid) references Sale(_sid));
 ";
 

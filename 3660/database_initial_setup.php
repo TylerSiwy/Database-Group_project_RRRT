@@ -13,7 +13,7 @@ include 'customer/create_employment_history_table.php';
 include 'sales/create_sale_customer_table.php';
 include 'sales/create_sale_employee_table.php';
 include 'sales/create_sale_vehicle_table.php';
-include 'warranty/create_vehicle_warranty_table.php';
+include 'warranty/create_sale_warranty_table.php';
 include 'credentials.php';
 
 
@@ -53,7 +53,7 @@ function database_setup() {
         create_sale_customer_table();
         create_sale_employee_table();
         create_sale_vehicle_table();
-        create_vehicle_warranty_table();
+        create_sale_warranty_table();
 
         //Insertions
 
@@ -112,13 +112,14 @@ function database_setup() {
         INSERT INTO Sale_Customer VALUES('Ryan', 'Wenman', '6664206969', 'S-420');");
 
 /* relations ******************************************************/
-        insertSQL("Sale_Employee","INSERT INTO Sale_Employee VALUES('E-069', 'S-345');
+        insertSQL("Sale_Employee",
+        "INSERT INTO Sale_Employee VALUES('E-069', 'S-345');
         INSERT INTO Sale_Employee VALUES('E-666', 'S-117');
         INSERT INTO Sale_Employee VALUES('E-117', 'S-454');");
 
-        insertSQL("Vehicle_Warranty","INSERT INTO Vehicle_Warranty VALUES('P-123', 'S-345', 5000, 500,'Timmy');
-        INSERT INTO Vehicle_Warranty VALUES('P-234', 'S-117', 1000, 1000, 'Tommathy');
-        INSERT INTO Vehicle_Warranty VALUES('P-456', 'S-454', 2000, 700, 'Tim');");
+        insertSQL("Sale_Warranty","INSERT INTO Sale_Warranty VALUES('P-123', 'S-345', 5000, 500,'Timmy');
+        INSERT INTO Sale_Warranty VALUES('P-234', 'S-117', 1000, 1000, 'Tommathy');
+        INSERT INTO Sale_Warranty VALUES('P-456', 'S-454', 2000, 700, 'Tim');");
 
         insertSQL("Sale_Vehicle", "INSERT INTO Sale_Vehicle VALUES('1HGBH41JXMN109186', '2019-10-20', 'S-345');
         INSERT INTO Sale_Vehicle VALUES('9ZGBH41JXMN109185', '2010-04-30', 'S-117');
