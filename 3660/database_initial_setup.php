@@ -131,9 +131,9 @@ function database_setup() {
 		INSERT INTO Repairs VALUES('1HGBH41JXMN109186', '2019-10-20', 'R-000', 'flat rear left tire', 100, 98.76);
 		INSERT INTO Repairs VALUES('1HGBH41JXMN109186', '2019-10-20', 'R-001', 'worn brake', 250, 286.21);");
 
-		insertSQL("Payments","INSERT INTO Payments VALUES(INSERT INTO Payments VALUES('S-345','n-123','2019-10-10',2019-10-15,2000,723854345);
-		INSERT INTO Payments VALUES('S-345','n-223','2019-11-17',2019-11-15,2000,723854345);
-		INSERT INTO Payments VALUES('S-345','n-323','2019-12-12',2019-12-15,2000,723854345);");
+		insertSQL("Payments","INSERT INTO Payments VALUES('S-345','n-123','2019-10-10','2019-10-15',2000,723854345);
+        INSERT INTO Payments VALUES('S-345','n-223','2019-11-17','2019-11-15',2000,723854345);
+        INSERT INTO Payments VALUES('S-345','n-323','2019-12-12','2019-12-15',2000,723854345);");
 
         insertSQL("Employment_History","INSERT INTO Employment_History VALUES('Rylan', 'Bueckert', '7809283127', '2019-10-10','apple-picker','joey','joeys only','4039283433',21,'alberta','airdrie','T4B1W2');
         INSERT INTO Employment_History VALUES('Ryan', 'Wenman', '6664206969','2019-09-10','apple-dropper','joey','joeys only','4039283433',21,'alberta','airdrie','T4B1W2');
