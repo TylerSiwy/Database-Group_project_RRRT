@@ -146,10 +146,26 @@ body {
     color: #000;
 }
 
+.eight_wide_container
+{
+    display: grid;
+    grid-template-columns: repeat(8, 12.5vw);
+    background-color: #ccc;
+    color: #000;
+}
+
 .nine_wide_container
 {
     display: grid;
     grid-template-columns: repeat(9, 11.1vw);
+    background-color: #ccc;
+    color: #000;
+}
+
+.ten_wide_container
+{
+    display: grid;
+    grid-template-columns: repeat(10, 10vw);
     background-color: #ccc;
     color: #000;
 }
@@ -159,5 +175,13 @@ body {
     background-color: #444;
     color: #fff;
     font-size: 20px;
+    text-align: center;
+}
+
+.item_small
+{
+    background-color: #444;
+    color: #fff;
+    font-size: 18px;
     text-align: center;
 }
