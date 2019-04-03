@@ -33,33 +33,33 @@
 	// Output the results in a table format
 	if ($result->num_rows > 0) 
 	{ 
-		echo "<div class='profits_container'>";
+		echo "<div class='six_wide_container'>";
 		echo "<div class='item'>";
 		echo "Sale ID";
         echo "</div>";
         
 		echo "<div class='item'>";
-		echo "Sale Date";
-        echo "</div>";
-
-        echo "<div class='item'>";
-		echo "Vehicle Year";
+		echo "Payment Number";
         echo "</div>";
 
 		echo "<div class='item'>";
-		echo "Model";
+		echo "Due Date";
+		echo "</div>";
+		
+        echo "<div class='item'>";
+		echo "Date Paid";
+        echo "</div>";	
+
+        echo "<div class='item'>";
+		echo "Amount";
         echo "</div>";
 
         echo "<div class='item'>";
-		echo "Edition";
-        echo "</div>";
-
-        echo "<div class='item'>";
-		echo "Net Profit";
+		echo "Bank Account No";
         echo "</div></br>";
         echo "</div>";
 
-		echo "<div class='profits_container'>";
+		echo "<div class='six_wide_container'>";
 		// output data of each row
 		while($row = $result->fetch_assoc()) 
 		{
@@ -68,23 +68,23 @@
 			echo "</div>";
 
 			echo "<div class='item'>";
-			echo $row["sale_date"]." ";
+			echo $row["payment_number"]." ";
             echo "</div>";
-            
-            echo "<div class='item'>";
-			echo $row["_year"]." ";
-			echo "</div>";
-
+			
 			echo "<div class='item'>";
-			echo $row["model"]." ";
-            echo "</div>";
-            
+			echo $row["due_date"]." ";
+			echo "</div>";
+			
             echo "<div class='item'>";
-			echo $row["_edition"]." ";
+			echo $row["paid_date"]." ";
+			echo "</div>";
+   
+            echo "<div class='item'>";
+			echo $row["amount"]." ";
             echo "</div>";
 
             echo "<div class='item'>";
-			echo $row["net_profit"]." ";
+			echo $row["bank_account"]." ";
             echo "</div>";
 		}
 		echo "</div>";
