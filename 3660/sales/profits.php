@@ -41,7 +41,7 @@
 	// Output the results in a table format
 	if ($result->num_rows > 0) 
 	{ 
-		echo "<div class='profits_container'>";
+		echo "<div class='six_wide_container'>";
 			echo "<div class='item'>";
 				echo "Sale ID";
 			echo "</div>";
@@ -66,7 +66,7 @@
 				echo "Net Profit";
 			echo "</div></br>";
         echo "</div>";
-		echo "<div class='profits_container'>";
+		echo "<div class='six_wide_container'>";
 		// output data of each row
 			while($row = $result->fetch_assoc()) 
 			{
