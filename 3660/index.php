@@ -40,6 +40,10 @@ include 'database_initial_setup.php';
             <li><a href="customer/customer_balances.php">Customer Balances</a></li>
             <li><a href="customer/View_Customer.html">View A Customer</a></li>
             <li><a href="customer/all_late_payments.php">All Late Payments</a></li>
+            <li><a href="customer/Update_Customer.html">Update Customer</a></li>
+            <li><a href="customer/Delete_Customer.html">Delete Customer</a></li>
+            <li><a href="customer/customer_balances.php">Customer Balances</a></li>
+            <li><a href="customer/New_Employment_History.html">Add Employ History</a></li>
         </ul>
 
         <li><a href="#">Employees</a>

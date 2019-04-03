@@ -146,6 +146,14 @@ footer
     color: #000;
 }
 
+.four_wide_container
+{
+    display: grid;
+    grid-template-columns: repeat(4, 25vw);
+    background-color: #ccc;
+    color: #000;
+}
+
 .six_wide_container
 {
     display: grid;
