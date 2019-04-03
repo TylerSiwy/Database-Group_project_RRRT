@@ -7,7 +7,7 @@ $dbname = getdbName();
 
 //For Sale
 $VIN = $_POST['vin_input'];
-$SID = $_POST['sid_input'];
+//$SID = $_POST['sid_input'];
 $EID = $_POST['eid_input'];
 $commission = (int)$_POST['commission_input'];
 $sale_date = $_POST['sale_date_input'];
@@ -25,6 +25,34 @@ $province = $_POST["province_input"];
 $city = $_POST["city_input"];
 $postal_code = $_POST["postal_input"];
 $phone_number = $_POST["phone_input"];
+
+
+
+
+
+$con = new mysqli($servername, $username, $password, $dbname);
+        if ($con->connect_error) {
+             die("Connection failed: " . $con->connect_error);
+        }
+        $temp = "000";
+        $sql= "SELECT _sid FROM Sale ORDER BY _sid asc";
+        $result = $con->query($sql);
+        $row = $result->fetch_assoc();
+        while($row){
+           $array = explode('-', $row["_sid"]);
+           if($temp == $array[1]){
+              ++$temp;
+           }
+           $row = $result->fetch_assoc();
+        }
+        if(strlen($temp)==1){
+            $SID = "S-00".$temp;
+        }
+        else if(strlen($temp)==2){
+            $SID = "S-0".$temp;
+        }
+        else{
+            $SID = "S-".$temp;}
 
 $con = new mysqli($servername, $username, $password, $dbname);
 
