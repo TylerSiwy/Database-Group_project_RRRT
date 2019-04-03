@@ -82,7 +82,7 @@
             echo "</div>";
             
             echo "<div class='item'>";
-			echo $row["total_commissions"]." ";
+			echo round($row["total_commissions"]." ", 2);
             echo "</div>";
 		}
 		echo "</div>";
