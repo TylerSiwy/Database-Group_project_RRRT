@@ -15,7 +15,7 @@
 	$dbname = getdbName();
 
 	// Variables for inserting into Customer table
-	$EID = $_POST["input"];
+	$VIN = $_POST["input"];
 
 	// Insertion into Employee
 	$con = new mysqli($servername, $username, $password, $dbname);
@@ -25,7 +25,7 @@
 	}
 	$sql = "SELECT *
 	FROM Repairs
-	WHERE vin = '$EID'";
+	WHERE vin = '$VIN'";
 
 	$result = $con->query($sql);
 
