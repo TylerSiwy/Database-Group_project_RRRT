@@ -20,12 +20,13 @@
 	if ($con->connect_error) {
 	die("Connection failed: " . $con->connect_error);
 	}
-	$sql = "SELECT * 
-    FROM
-    (SELECT DAY(paid_date) AS DATE
-    FROM Payments) AS D
-    WHERE
-     D.DATE>= 11;";
+	$sql = "SELECT SUB.first_name, SUB.last_name, SUB.phone_number, count(Num_Late) as n
+	FROM 
+		(SELECT Payments._sid, count(payment_number) AS Num_Late, Sale_Customer.first_name, Sale_Customer.last_name, Sale_Customer.phone_number
+		 FROM Payments, Sale_Customer
+		 WHERE due_date < paid_date AND Payments._sid = Sale_Customer._sid
+		 GROUP BY _sid) AS SUB
+	GROUP BY  SUB.first_name, SUB.last_name, SUB.phone_number;";
 
 	$result = $con->query($sql);
 
@@ -33,59 +34,43 @@
 	// Output the results in a table format
 	if ($result->num_rows > 0) 
 	{ 
-		echo "<div class='six_wide_container'>";
+		echo "<div class='four_wide_container'>";
 		echo "<div class='item'>";
-		echo "Sale ID";
+		echo "First Name";
         echo "</div>";
         
 		echo "<div class='item'>";
-		echo "Payment Number";
+		echo "Last Name";
         echo "</div>";
 
 		echo "<div class='item'>";
-		echo "Due Date";
+		echo "Phone Number";
 		echo "</div>";
-		
-        echo "<div class='item'>";
-		echo "Date Paid";
-        echo "</div>";	
 
         echo "<div class='item'>";
-		echo "Amount";
-        echo "</div>";
-
-        echo "<div class='item'>";
-		echo "Bank Account No";
+		echo "Number Of Late Payments";
         echo "</div></br>";
         echo "</div>";
 
-		echo "<div class='six_wide_container'>";
+		echo "<div class='four_wide_container'>";
 		// output data of each row
 		while($row = $result->fetch_assoc()) 
 		{
 			echo "<div class='item'>";
-			echo $row["_sid"]." ";
+			echo $row["first_name"]." ";
 			echo "</div>";
 
 			echo "<div class='item'>";
-			echo $row["payment_number"]." ";
+			echo $row["last_name"]." ";
             echo "</div>";
 			
 			echo "<div class='item'>";
-			echo $row["due_date"]." ";
+			echo $row["phone_number"]." ";
 			echo "</div>";
 			
             echo "<div class='item'>";
-			echo $row["paid_date"]." ";
+			echo $row["n"]." ";
 			echo "</div>";
-   
-            echo "<div class='item'>";
-			echo $row["amount"]." ";
-            echo "</div>";
-
-            echo "<div class='item'>";
-			echo $row["bank_account"]." ";
-            echo "</div>";
 		}
 		echo "</div>";
 	} else 
