@@ -34,7 +34,7 @@
 	// Output the results in a table format
 	if ($result->num_rows > 0) 
 	{ 
-		echo "<div class='ten_wide_container'>";
+		echo "<div class='nine_wide_container'>";
 			echo "<div class='item'>";
 				echo "Employee ID";
 			echo "</div>";
@@ -46,10 +46,6 @@
 			echo "<div class='item'>";
 				echo "C First Name";
 			echo "</div>";
-            
-            echo "<div class='item'>";
-				echo "Vehicle Make";
-            echo "</div>";
             
 			echo "<div class='item'>";
 				echo "Vehicle Year";
@@ -75,12 +71,12 @@
 				echo "Sale ID";
 			echo "</div></br>";	
 		echo "</div>";
-		echo "<div class='ten_wide_container'>";
+		echo "<div class='nine_wide_container'>";
 		// output data of each row
 			while($row = $result->fetch_assoc()) 
 			{
 				echo "<div class='item'>";
-					echo $row["first_name"]." ";
+					echo $row["eid"]." ";
 				echo "</div>";
 
 				echo "<div class='item'>";
@@ -90,10 +86,6 @@
 				echo "<div class='item'>";
 					echo $row["first_name"]." ";
 				echo "</div>";
-
-                echo "<div class='item'>";
-					echo "Toyota"." ";
-                echo "</div>";
                 
 				echo "<div class='item'>";
 					echo $row["_year"]." ";
