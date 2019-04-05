@@ -4,7 +4,7 @@
 </head>
 
 <body>
-	<a href="View_Employee.html"><button>Back</button></a>
+	<a href="../index.php"><button>Back</button></a>
 	<br><br><br>
 	
 	<?php
@@ -20,32 +20,32 @@
 	if ($con->connect_error) {
 	die("Connection failed: " . $con->connect_error);
 	}
+	
 	$sql = "SELECT S.eid, S.last_name, S.first_name, sale_commissions + warranty_commisions as total_commissions
-    FROM
-        (SELECT Employee.eid, last_name, first_name, sum(commission) as sale_commissions
-        FROM Employee, Sale_Employee, Sale
-        WHERE Employee.eid = Sale_Employee.eid AND Sale_Employee._sid = Sale._sid
-        GROUP BY Employee.eid
-        UNION
-        SELECT Employee.eid, last_name, first_name, 0
-        FROM Employee
-        WHERE NOT EXISTS
-            (SELECT eid FROM Sale_Employee WHERE Employee.eid = Sale_Employee.eid)) as S,
-    
-        (SELECT Employee.eid, last_name, first_name, sum(price * 0.25) as warranty_commisions
-        FROM Employee, Sale_Employee, Vehicle_Warranty, Warranty
-        WHERE Employee.eid = Sale_Employee.eid AND Sale_Employee._sid = Vehicle_Warranty._sid AND Vehicle_Warranty.pid = Warranty.pid
-        GROUP BY Employee.eid
-        UNION
-        SELECT Employee.eid, last_name, first_name, 0
-        FROM Employee
-        WHERE NOT EXISTS
-            (SELECT eid FROM Sale_Employee, Vehicle_Warranty WHERE Employee.eid = Sale_Employee.eid AND Sale_Employee._sid = Vehicle_Warranty._sid)) as W
-    WHERE S.eid = W.eid
-    ORDER BY total_commissions desc;";
+	FROM
+		(SELECT Employee.eid, last_name, first_name, sum(commission) as sale_commissions
+		FROM Employee, Sale_Employee, Sale
+		WHERE Employee.eid = Sale_Employee.eid AND Sale_Employee._sid = Sale._sid
+		GROUP BY Employee.eid
+		UNION
+		SELECT Employee.eid, last_name, first_name, 0
+		FROM Employee
+		WHERE NOT EXISTS
+			(SELECT eid FROM Sale_Employee WHERE Employee.eid = Sale_Employee.eid)) as S,
+	
+		(SELECT Employee.eid, last_name, first_name, sum(price * 0.25) as warranty_commisions
+		FROM Employee, Sale_Employee, Sale_Warranty, Warranty
+		WHERE Employee.eid = Sale_Employee.eid AND Sale_Employee._sid = Sale_Warranty._sid AND Sale_Warranty.pid = Warranty.pid
+		GROUP BY Employee.eid
+		UNION
+		SELECT Employee.eid, last_name, first_name, 0
+		FROM Employee
+		WHERE NOT EXISTS
+			(SELECT eid FROM Sale_Employee, Sale_Warranty WHERE Employee.eid = Sale_Employee.eid AND Sale_Employee._sid = Sale_Warranty._sid)) as W
+	WHERE S.eid = W.eid
+	ORDER BY total_commissions desc;";
 
 	$result = $con->query($sql);
-
 
 	// Output the results in a table format
 	if ($result->num_rows > 0) 

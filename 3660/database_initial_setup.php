@@ -102,15 +102,15 @@ function database_setup() {
 
         insertSQL("Customer",
         "INSERT INTO Customer values('Rylan', 'Bueckert', '1997-09-18', 'Male', 1230, '3 Ave', 'La Crete', 'Alberta', 'T0H2H0', '7809283127');
-        insert into Customer values('Ryan', 'Wenman', '1940-02-14', 'Male', 30445, '66 Street', 'Airdrie', 'Alberta', 'T4A6G9', '6664206969');
+        insert into Customer values('Ryan', 'Wenman', '1940-02-14', 'Male', 30445, '66 Street', 'Airdrie', 'Alberta', 'T4A6G9', '1234567890');
         insert into Customer values('Tyler', 'Siwy', '1992-09-02', 'Male', 420, '69 Street', 'Calgary', 'Alberta', 'T5P4H0', '457285347');
         ");
 
         insertSQL("Sale_Customer",
         "INSERT INTO Sale_Customer VALUES('Rylan', 'Bueckert', '7809283127', 'S-345');
-        INSERT INTO Sale_Customer VALUES('Ryan', 'Wenman', '6664206969', 'S-117');
-        INSERT INTO Sale_Customer VALUES('Ryan', 'Wenman', '6664206969', 'S-454');
-        INSERT INTO Sale_Customer VALUES('Ryan', 'Wenman', '6664206969', 'S-420');");
+        INSERT INTO Sale_Customer VALUES('Ryan', 'Wenman', '1234567890', 'S-117');
+        INSERT INTO Sale_Customer VALUES('Ryan', 'Wenman', '1234567890', 'S-454');
+        INSERT INTO Sale_Customer VALUES('Ryan', 'Wenman', '1234567890', 'S-420');");
 
 /* relations ******************************************************/
         insertSQL("Sale_Employee",
@@ -136,11 +136,11 @@ function database_setup() {
         INSERT INTO Payments VALUES('S-345','n-323','2019-12-12','2019-12-15',2000,723854345);");
 
         insertSQL("Employment_History","INSERT INTO Employment_History VALUES('Rylan', 'Bueckert', '7809283127', '2019-10-10','apple-picker','joey','joeys only','4039283433',21,'alberta','airdrie','T4B1W2');
-        INSERT INTO Employment_History VALUES('Ryan', 'Wenman', '6664206969','2019-09-10','apple-dropper','joey','joeys only','4039283433',21,'alberta','airdrie','T4B1W2');
+        INSERT INTO Employment_History VALUES('Ryan', 'Wenman', '1234567890','2019-09-10','apple-dropper','joey','joeys only','4039283433',21,'alberta','airdrie','T4B1W2');
         ");
 
     } else {
-        echo "Database not created: " . $con->error."<br>";
+        echo $con->error."<br>";
     }
 }
 

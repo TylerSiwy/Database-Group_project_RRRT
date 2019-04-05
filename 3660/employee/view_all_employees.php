@@ -28,7 +28,7 @@
 	// Output the results in a table format
 	if ($result->num_rows > 0) 
 	{ 
-		echo "<div class='employee_container'>";
+		echo "<div class='four_wide_container'>";
 		echo "<div class='item'>";
 		echo "First Name";
 		echo "</div>";
@@ -38,9 +38,12 @@
 		echo "<div class='item'>";
 		echo "Phone Number";
 		echo "</div>";
+		echo "<div class='item'>";
+		echo "Employee ID";
+		echo "</div>";
 		echo "</div></br>";
 
-		echo "<div class='employee_container'>";
+		echo "<div class='four_wide_container'>";
 		// output data of each row
 		while($row = $result->fetch_assoc()) 
 		{
@@ -54,6 +57,10 @@
 
 			echo "<div class='item'>";
 			echo $row["phone_number"]." ";
+			echo "</div>";
+
+			echo "<div class='item'>";
+			echo $row["eid"]." ";
 			echo "</div>";
 		}
 		echo "</div>";
