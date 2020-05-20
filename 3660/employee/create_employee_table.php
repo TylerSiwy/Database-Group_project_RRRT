@@ -22,7 +22,7 @@ $sql = "CREATE TABLE Employee (
 ;
 
 if ($conn->query($sql) === TRUE) {
-    echo "Vehicle Table created successfully"."<br>";
+    echo "Employee Table created successfully"."<br>";
 } else {
     echo "Error creating table: " . $conn->error."<br>";
 }
